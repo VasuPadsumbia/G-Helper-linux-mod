@@ -21,6 +21,9 @@
 - [ ] Add AMD dGPU overdrive.
 
 ## Phase 3: Windows look
+- [ ] Custom performance modes, as in Windows Fans + Power: **Add**, **Rename** and **Remove**
+  buttons next to the mode dropdown, each new mode based on Silent, Balanced or Turbo. Upstream's
+  `Modes.cs` already reads modes 3+ from config, but there is no UI to create them.
 - [ ] Apply the palette and mode-tile style in `GHelperTheme.axaml` and `WindowsLook.axaml`.
 - [ ] Rework the main window and the Fans + Power layout to match Windows.
 
