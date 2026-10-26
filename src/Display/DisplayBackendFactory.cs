@@ -54,6 +54,14 @@ public static class DisplayBackendFactory
             }
             if (compositor == "gnome-shell")
                 Helpers.Logger.WriteLine("Display: gdctl unavailable (GNOME < 48 or mutter-common-bin not installed)");
+
+            // mod: GNOME 40-47 has no gdctl; use Mutter's DisplayConfig D-Bus API directly.
+            Helpers.Logger.WriteLine("Display: probing Mutter DisplayConfig via gdbus...");
+            if (MutterDBusBackend.Probe())
+            {
+                Helpers.Logger.WriteLine("Display: Wayland session, using Mutter D-Bus (GNOME)");
+                return new MutterDBusBackend();
+            }
         }
 
         // 3. Try kscreen-doctor (KDE Wayland, including Plasma 5.x)

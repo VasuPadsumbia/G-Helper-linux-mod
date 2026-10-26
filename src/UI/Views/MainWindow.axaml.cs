@@ -42,8 +42,12 @@ public partial class MainWindow : Window
     private int _coinShakeFrame;
     private TranslateTransform? _coinTransform;
 
-    // Accent colors matching G-Helper's RForm.cs
-    private static readonly IBrush AccentBrush = new SolidColorBrush(Color.Parse("#4CC2FF"));
+    // Mode colors from G-Helper for Windows (app/UI/RForm.cs)
+    internal static readonly Color ColorEco = Color.Parse("#06B48A");
+    internal static readonly Color ColorStandard = Color.Parse("#3AAEEF");
+    internal static readonly Color ColorTurbo = Color.Parse("#FF2020");
+    private static readonly Color ColorGray = Color.Parse("#A8A8A8");
+    private static readonly Color ButtonMain = Color.Parse("#2E2E2E");
     private static readonly IBrush TransparentBrush = Brushes.Transparent;
     private static readonly IBrush CoinGoldBrush = new SolidColorBrush(Color.Parse("#FFD700"));
     private static readonly IBrush CoinDarkBrush = new SolidColorBrush(Color.Parse("#8B6914"));
@@ -54,6 +58,18 @@ public partial class MainWindow : Window
         panelAudio.IsVisible = !Helpers.AppConfig.Is("disable_audio");
         Labels.LanguageChanged += () => Avalonia.Threading.Dispatcher.UIThread.Post(() => ApplyLabels());
         InitDonate();
+        GHelper.Linux.Mode.ModeControl.CustomSplChanged +=
+            () => Avalonia.Threading.Dispatcher.UIThread.Post(RefreshPerformanceMode);
+        // Click a fan readout to switch between RPM and percent, as in G-Helper for Windows.
+        labelCPUFan.PointerPressed += (_, _) => ToggleFanUnits();
+        buttonOverlay.PointerReleased += (_, e) =>
+        {
+            if (e.InitialPressMouseButton == Avalonia.Input.MouseButton.Right)
+                GHelper.Linux.Overlay.OverlayControl.Toggle();
+        };
+        GHelper.Linux.Overlay.OverlayControl.EnabledChanged += RefreshOverlayButton;
+        RefreshOverlayButton();
+        labelGPUFan.PointerPressed += (_, _) => ToggleFanUnits();
 
         // Refresh timer for live sensor data
         _refreshTimer = new DispatcherTimer
@@ -349,6 +365,32 @@ public partial class MainWindow : Window
         }
     }
 
+    private OverlayConfigWindow? _overlayConfigWindow;
+
+    private void ButtonOverlay_Click(object? sender, RoutedEventArgs e)
+    {
+        if (_overlayConfigWindow == null)
+        {
+            _overlayConfigWindow = new OverlayConfigWindow();
+            _overlayConfigWindow.Closed += (_, _) => _overlayConfigWindow = null;
+            _overlayConfigWindow.Show(this);
+        }
+        else
+            _overlayConfigWindow.Activate();
+    }
+
+    private void RefreshOverlayButton()
+    {
+        labelOverlayButton.Text = Labels.Get("overlay");
+        SetButtonActive(buttonOverlay, GHelper.Linux.Overlay.OverlaySettings.Enabled, ColorStandard);
+    }
+
+    private void ToggleFanUnits()
+    {
+        Fan.FanSensorControl.FanRpm = !Fan.FanSensorControl.FanRpm;
+        RefreshSensorData();
+    }
+
     private void RefreshSensorData()
     {
         try
@@ -440,17 +482,19 @@ public partial class MainWindow : Window
             _ => Labels.Get("mode_unknown")
         };
 
-        // Combined header: "Mode: Balanced".
-        labelPerf.Text = Labels.Format("mode_prefix", modeName);
+        // Combined header: "Mode: Balanced", plus the custom SPL like G-Helper
+        // for Windows ("Mode: Turbo 15W").
+        int customSpl = GHelper.Linux.Mode.ModeControl.CustomSpl;
+        labelPerf.Text = Labels.Format("mode_prefix", modeName) + (customSpl > 0 ? $" {customSpl}W" : "");
         labelPerfMode.Text = modeName;
         UpdatePerfButtons();
     }
 
     private void UpdatePerfButtons()
     {
-        SetButtonActive(buttonSilent, _currentPerfMode == 2);
-        SetButtonActive(buttonBalanced, _currentPerfMode == 0);
-        SetButtonActive(buttonTurbo, _currentPerfMode == 1);
+        SetButtonActive(buttonSilent, _currentPerfMode == 2, ColorEco);
+        SetButtonActive(buttonBalanced, _currentPerfMode == 0, ColorStandard);
+        SetButtonActive(buttonTurbo, _currentPerfMode == 1, ColorTurbo);
     }
 
     private void SetPerformanceMode(int mode)
@@ -564,14 +608,9 @@ public partial class MainWindow : Window
         }
         else
         {
-            labelTipGPU.Text = _currentGpuMode switch
-            {
-                0 => Labels.Get("gpu_tip_eco"),
-                1 => Labels.Get("gpu_tip_standard"),
-                2 => Labels.Get("gpu_tip_optimized"),
-                3 => Labels.Get("gpu_tip_ultimate"),
-                _ => ""
-            };
+            // Like G-Helper for Windows, the mode description only shows while
+            // hovering a GPU mode button (see GpuModeButton_PointerEntered).
+            labelTipGPU.Text = "";
         }
 
         bool pciBackend = Helpers.AppConfig.IsPciGpuBackend();
@@ -592,10 +631,10 @@ public partial class MainWindow : Window
 
     private void UpdateGpuButtons()
     {
-        SetButtonActive(buttonEco, _currentGpuMode == 0);
-        SetButtonActive(buttonStandard, _currentGpuMode == 1);
-        SetButtonActive(buttonOptimized, _currentGpuMode == 2);
-        SetButtonActive(buttonUltimate, _currentGpuMode == 3);
+        SetButtonActive(buttonEco, _currentGpuMode == 0, ColorEco);
+        SetButtonActive(buttonStandard, _currentGpuMode == 1, ColorStandard);
+        SetButtonActive(buttonOptimized, _currentGpuMode == 2, ColorEco);
+        SetButtonActive(buttonUltimate, _currentGpuMode == 3, ColorTurbo);
     }
 
     private NvidiaProcessesWindow? _nvidiaProcessesWindow;
@@ -1330,9 +1369,9 @@ public partial class MainWindow : Window
         labelHighRefresh.Text = $"{maxHz}Hz";
 
         // Highlight active button
-        SetButtonActive(buttonScreenAuto, isAuto);
-        SetButtonActive(button60Hz, !isAuto && hz == 60);
-        SetButtonActive(button120Hz, !isAuto && hz > 60);
+        SetButtonActive(buttonScreenAuto, isAuto, ColorGray);
+        SetButtonActive(button60Hz, !isAuto && hz == 60, ColorGray);
+        SetButtonActive(button120Hz, !isAuto && hz > 60, ColorGray);
 
         // Check for MiniLED support
         bool hasMiniLed = App.Wmi?.IsFeatureSupported(AsusAttributes.MiniLedMode) ?? false;
@@ -1341,21 +1380,23 @@ public partial class MainWindow : Window
 
     private void ButtonScreenAuto_Click(object? sender, RoutedEventArgs e)
     {
-        bool wasAuto = Helpers.AppConfig.Is("screen_auto");
-        if (wasAuto)
-        {
-            // Toggle off, keep current rate, just disable auto
-            Helpers.AppConfig.Set("screen_auto", 0);
-            Helpers.Logger.WriteLine("Screen auto: disabled");
-        }
-        else
-        {
-            // Enable auto and apply immediately
-            Helpers.AppConfig.Set("screen_auto", 1);
-            (App.Current as App)?.AutoScreen();
-        }
+        // Like G-Helper for Windows: Auto always turns on and applies now
+        // (upstream toggled it off on a second click, which looked like it did nothing).
+        // Picking 60Hz or the max rate turns Auto off.
+        Helpers.AppConfig.Set("screen_auto", 1);
+        (App.Current as App)?.AutoScreen();
         RefreshScreen();
     }
+
+    private void ScreenButton_PointerEntered(object? sender, Avalonia.Input.PointerEventArgs e)
+    {
+        labelTipScreen.Text = sender == buttonScreenAuto ? Labels.Get("screen_tip_auto")
+            : sender == button60Hz ? Labels.Get("screen_tip_min")
+            : Labels.Get("screen_tip_max");
+    }
+
+    private void ScreenButton_PointerExited(object? sender, Avalonia.Input.PointerEventArgs e)
+        => labelTipScreen.Text = "";
 
     private void Button60Hz_Click(object? sender, RoutedEventArgs e)
     {
@@ -2783,17 +2824,76 @@ public partial class MainWindow : Window
 
     // UI Helpers
 
-    private static void SetButtonActive(Button button, bool active)
+    /// <summary>
+    /// G-Helper for Windows active style (app/UI/RButton.cs): border in the mode
+    /// color, lightened toward the top, plus a wash of that color (alpha 32) that
+    /// fades out over the top 20% of the button.
+    /// </summary>
+    internal static void SetButtonActive(Button button, bool active, Color color)
     {
+        button.BorderThickness = new Avalonia.Thickness(2);
         if (active)
         {
-            button.BorderBrush = AccentBrush;
-            button.BorderThickness = new Avalonia.Thickness(2);
+            button.BorderBrush = new LinearGradientBrush
+            {
+                StartPoint = new Avalonia.RelativePoint(0, 0, Avalonia.RelativeUnit.Relative),
+                EndPoint = new Avalonia.RelativePoint(0, 1, Avalonia.RelativeUnit.Relative),
+                GradientStops =
+                {
+                    new GradientStop(Lighten(color, 0.15), 0),
+                    new GradientStop(color, 1),
+                },
+            };
+            button.Background = new LinearGradientBrush
+            {
+                StartPoint = new Avalonia.RelativePoint(0, 0, Avalonia.RelativeUnit.Relative),
+                EndPoint = new Avalonia.RelativePoint(0, 1, Avalonia.RelativeUnit.Relative),
+                GradientStops =
+                {
+                    new GradientStop(Blend(ButtonMain, color, 32 / 255.0), 0),
+                    new GradientStop(ButtonMain, 0.2),
+                    new GradientStop(ButtonMain, 1),
+                },
+            };
         }
         else
         {
             button.BorderBrush = TransparentBrush;
-            button.BorderThickness = new Avalonia.Thickness(2);
+            button.ClearValue(Button.BackgroundProperty);
         }
     }
+
+    private static Color Lighten(Color c, double amount) => Blend(c, Colors.White, amount);
+
+    private static Color Blend(Color from, Color to, double amount) => Color.FromRgb(
+        (byte)(from.R + (to.R - from.R) * amount),
+        (byte)(from.G + (to.G - from.G) * amount),
+        (byte)(from.B + (to.B - from.B) * amount));
+
+    private void GpuModeButton_PointerEntered(object? sender, Avalonia.Input.PointerEventArgs e)
+    {
+        if (App.GpuModeCtrl?.IsPendingReboot() == true || labelTipGPU.Text is { Length: > 0 })
+            return;
+        string? tip = sender == buttonEco ? Labels.Get("gpu_tip_eco")
+            : sender == buttonStandard ? Labels.Get("gpu_tip_standard")
+            : sender == buttonOptimized ? Labels.Get("gpu_tip_optimized")
+            : sender == buttonUltimate ? Labels.Get("gpu_tip_ultimate")
+            : null;
+        if (tip != null)
+        {
+            labelTipGPU.Text = tip;
+            _gpuTipFromHover = true;
+        }
+    }
+
+    private void GpuModeButton_PointerExited(object? sender, Avalonia.Input.PointerEventArgs e)
+    {
+        if (_gpuTipFromHover)
+        {
+            labelTipGPU.Text = "";
+            _gpuTipFromHover = false;
+        }
+    }
+
+    private bool _gpuTipFromHover;
 }

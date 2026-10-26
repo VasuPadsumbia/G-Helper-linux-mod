@@ -25,6 +25,11 @@ class Program
             return;
         }
 
+        // mod: "ghelper --overlay" toggles the overlay in the running instance
+        // (bind it to Ctrl+Shift+Alt+O in the desktop's keyboard shortcuts).
+        if (args.Contains("--overlay") && CommandIpc.TrySend("toggle-overlay"))
+            return;
+
         // "ghelper --osk" toggles the on-screen keyboard of a running
         // instance (hotkey/controller-chord friendly). When no instance is
         // running, normal startup continues and App opens the keyboard.

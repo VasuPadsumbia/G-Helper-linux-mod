@@ -8,4 +8,5 @@
 - [gpu-tuning.md](gpu-tuning.md): overclocking, undervolting, and the advanced GPU power unlock
 - [amd-explained.md](amd-explained.md): the AMD parts in plain terms
 - [third-party.md](third-party.md): every external project we use, with links
+- [windows-parity.md](windows-parity.md): every Windows G-Helper setting still missing, as a checklist
 - [roadmap.md](roadmap.md): build order and progress

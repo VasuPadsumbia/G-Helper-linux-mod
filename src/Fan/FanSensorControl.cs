@@ -33,7 +33,8 @@ public class FanSensorControl
     /// <summary>Whether to display fan speed as RPM instead of percentage.</summary>
     public static bool FanRpm
     {
-        get => AppConfig.Is(KeyFanRpm);
+        // mod: RPM by default; percent only when the user switches to it.
+        get => AppConfig.IsNotFalse(KeyFanRpm);
         set => AppConfig.Set(KeyFanRpm, value ? 1 : 0);
     }
 

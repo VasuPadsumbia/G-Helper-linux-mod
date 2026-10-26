@@ -32,6 +32,24 @@ public class ModeControl
     /// </summary>
     public event Action<int>? ModeApplied;
 
+    /// <summary>
+    /// mod: sustained power limit (SPL / PL1) applied on top of the current mode,
+    /// 0 when the firmware default is in effect. The main window shows it in the
+    /// mode title ("Mode: Turbo 15W"), as G-Helper for Windows does.
+    /// </summary>
+    public static int CustomSpl { get; private set; }
+
+    /// <summary>Raised from any thread when <see cref="CustomSpl"/> changes.</summary>
+    public static event Action? CustomSplChanged;
+
+    public static void SetCustomSpl(int watts)
+    {
+        if (CustomSpl == watts)
+            return;
+        CustomSpl = watts;
+        CustomSplChanged?.Invoke();
+    }
+
     // Power limit bounds (matches Windows G-Helper AsusACPI constructor)
 
     internal const int MinTotal = 5;
@@ -134,6 +152,7 @@ public class ModeControl
         }
 
         _customPower = 0;
+        SetCustomSpl(0);
 
         App.Wmi?.SetThrottleThermalPolicy(baseMode);
 
@@ -512,6 +531,7 @@ public class ModeControl
         {
             wmi.SetPptLimit(Platform.Linux.AsusAttributes.PptPl1Spl, pl1);
             _customPower = pl1;
+            SetCustomSpl(pl1);
             Helpers.Logger.WriteLine($"AutoPower: PL1 = {pl1}W ({pl1Bounds.Min}-{pl1Bounds.Max}W)");
         }
 
