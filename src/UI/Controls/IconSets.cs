@@ -20,7 +20,8 @@ public static class IconSets
     public static IReadOnlyList<string> AvailableSlugs => IconSetsGenerated.Slugs;
 
     /// <summary>Default slug when config is missing or references an unknown set.</summary>
-    public const string Default = "noto";
+    // Monochrome white glyphs, matching G-Helper for Windows (mod: was "noto").
+    public const string Default = "fluent-system";
 
     /// <summary>True if <paramref name="slug"/> names a bundled set.</summary>
     public static bool Exists(string? slug) =>

@@ -127,6 +127,7 @@
                     <UniformGrid x:Name="panelGpuModes" Rows="1" Columns="4"
                                  ColumnSpacing="6" Margin="0,0">
                         <Button x:Name="buttonEco" Classes="ghelper-tall"
+                                PointerEntered="GpuModeButton_PointerEntered" PointerExited="GpuModeButton_PointerExited"
                                 Click="ButtonEco_Click">
                             <StackPanel HorizontalAlignment="Center" Spacing="4">
                                 <ctrl:Icon IconName="herb" Width="24" Height="24" HorizontalAlignment="Center" />
@@ -134,6 +135,7 @@
                             </StackPanel>
                         </Button>
                         <Button x:Name="buttonStandard" Classes="ghelper-tall"
+                                PointerEntered="GpuModeButton_PointerEntered" PointerExited="GpuModeButton_PointerExited"
                                 Click="ButtonStandard_Click">
                             <StackPanel HorizontalAlignment="Center" Spacing="4">
                                 <ctrl:Icon IconName="desktop" Width="24" Height="24" HorizontalAlignment="Center" />
@@ -141,6 +143,7 @@
                             </StackPanel>
                         </Button>
                         <Button x:Name="buttonUltimate" Classes="ghelper-tall"
+                                PointerEntered="GpuModeButton_PointerEntered" PointerExited="GpuModeButton_PointerExited"
                                 Click="ButtonUltimate_Click">
                             <StackPanel HorizontalAlignment="Center" Spacing="4">
                                 <ctrl:Icon IconName="gamepad" Width="24" Height="24" HorizontalAlignment="Center" />
@@ -148,6 +151,7 @@
                             </StackPanel>
                         </Button>
                         <Button x:Name="buttonOptimized" Classes="ghelper-tall"
+                                PointerEntered="GpuModeButton_PointerEntered" PointerExited="GpuModeButton_PointerExited"
                                 Click="ButtonOptimized_Click">
                             <StackPanel HorizontalAlignment="Center" Spacing="4">
                                 <ctrl:Icon IconName="bulb" Width="24" Height="24" HorizontalAlignment="Center" />
@@ -541,7 +545,8 @@
 
                     <!-- Donate + Updates + Quit -->
                     <Grid ColumnDefinitions="Auto,*,Auto,Auto">
-                        <Button Grid.Column="0" x:Name="buttonDonate" Classes="ghelper-coin"
+                        <!-- mod: hidden; G-Helper for Windows has no donate button here. utajum is credited in the README. -->
+                        <Button Grid.Column="0" x:Name="buttonDonate" Classes="ghelper-coin" IsVisible="False"
                                 Margin="0,0,6,0" Height="36" MinWidth="140"
                                 Click="ButtonDonate_Click">
                             <Grid>

@@ -7,6 +7,10 @@
         Light: SystemColors defaults
         
         We force dark mode and match pixel-perfect.
+
+        mod: matched to the current Windows RForm.cs dark palette (buttonMain #2E2E2E,
+        hover +4% toward white = #363636, pressed +8% = #3F3F3F, chart #232323) and
+        flat sections with no card background, as in G-Helper for Windows.
     -->
 
     <Style Selector="Window">
@@ -18,7 +22,7 @@
 
     <!-- Panel backgrounds matching G-Helper's dark theme -->
     <Style Selector="Border.panel">
-        <Setter Property="Background" Value="#262626" />
+        <Setter Property="Background" Value="Transparent" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="Padding" Value="10" />
         <Setter Property="Margin" Value="3" />
@@ -26,7 +30,7 @@
 
     <!-- Buttons matching RButton.cs rounded style (borderRadius=5) -->
     <Style Selector="Button.ghelper">
-        <Setter Property="Background" Value="#373737" />
+        <Setter Property="Background" Value="#2E2E2E" />
         <Setter Property="Foreground" Value="#F0F0F0" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="Padding" Value="8,6" />
@@ -39,7 +43,11 @@
     </Style>
 
     <Style Selector="Button.ghelper:pointerover /template/ ContentPresenter">
-        <Setter Property="Background" Value="#454545" />
+        <Setter Property="Background" Value="#363636" />
+    </Style>
+
+    <Style Selector="Button.ghelper:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="#3F3F3F" />
     </Style>
 
     <!-- Active state for ghelper buttons - red-orange border + slightly darker
@@ -56,7 +64,7 @@
 
     <!-- Tall mode-selector buttons (perf/GPU) with icon above text -->
     <Style Selector="Button.ghelper-tall">
-        <Setter Property="Background" Value="#373737" />
+        <Setter Property="Background" Value="#2E2E2E" />
         <Setter Property="Foreground" Value="#F0F0F0" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="Padding" Value="4,8" />
@@ -70,7 +78,11 @@
     </Style>
 
     <Style Selector="Button.ghelper-tall:pointerover /template/ ContentPresenter">
-        <Setter Property="Background" Value="#454545" />
+        <Setter Property="Background" Value="#363636" />
+    </Style>
+
+    <Style Selector="Button.ghelper-tall:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="#3F3F3F" />
     </Style>
 
     <!-- Wrap long translated labels inside mode buttons -->
@@ -100,7 +112,7 @@
 
     <!-- ComboBox styling -->
     <Style Selector="ComboBox">
-        <Setter Property="Background" Value="#373737" />
+        <Setter Property="Background" Value="#2E2E2E" />
         <Setter Property="Foreground" Value="#F0F0F0" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
