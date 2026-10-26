@@ -2794,8 +2794,8 @@ public partial class MainWindow : Window
         {
             button.BorderBrush = new LinearGradientBrush
             {
-                StartPoint = new RelativePoint(0, 0, RelativeUnit.Relative),
-                EndPoint = new RelativePoint(0, 1, RelativeUnit.Relative),
+                StartPoint = new Avalonia.RelativePoint(0, 0, Avalonia.RelativeUnit.Relative),
+                EndPoint = new Avalonia.RelativePoint(0, 1, Avalonia.RelativeUnit.Relative),
                 GradientStops =
                 {
                     new GradientStop(Lighten(color, 0.15), 0),
@@ -2804,8 +2804,8 @@ public partial class MainWindow : Window
             };
             button.Background = new LinearGradientBrush
             {
-                StartPoint = new RelativePoint(0, 0, RelativeUnit.Relative),
-                EndPoint = new RelativePoint(0, 1, RelativeUnit.Relative),
+                StartPoint = new Avalonia.RelativePoint(0, 0, Avalonia.RelativeUnit.Relative),
+                EndPoint = new Avalonia.RelativePoint(0, 1, Avalonia.RelativeUnit.Relative),
                 GradientStops =
                 {
                     new GradientStop(Blend(ButtonMain, color, 32 / 255.0), 0),
