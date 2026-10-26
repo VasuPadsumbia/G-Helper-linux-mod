@@ -201,6 +201,9 @@ public static class Norwegian
         ["refresh_rate_format"] = "Oppdateringsfrekvens: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, overdrive på",
         ["auto_screen_battery"] = "Auto: 60Hz, overdrive av",
+        ["screen_tip_auto"] = "Setter 60 Hz for å spare batteri, og tilbake når laderen er koblet til",
+        ["screen_tip_min"] = "60 Hz oppdateringsfrekvens for å spare batteri",
+        ["screen_tip_max"] = "Maksimal oppdateringsfrekvens for lavere forsinkelse",
         ["setup_required"] = "Oppsett påkrevd",
         ["udev_not_installed"] = "udev-regler er ikke installert. Kjør install.sh for full funksjonalitet (batteribegrensning, viftekontroll osv.)",
 

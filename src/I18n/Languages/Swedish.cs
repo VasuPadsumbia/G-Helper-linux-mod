@@ -201,6 +201,9 @@ public static class Swedish
         ["refresh_rate_format"] = "Uppdateringsfrekvens: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, overdrive på",
         ["auto_screen_battery"] = "Auto: 60Hz, overdrive av",
+        ["screen_tip_auto"] = "Ställer in 60 Hz för att spara batteri och återställer när laddaren ansluts",
+        ["screen_tip_min"] = "60 Hz uppdateringsfrekvens för att spara batteri",
+        ["screen_tip_max"] = "Högsta uppdateringsfrekvens för lägre fördröjning",
         ["setup_required"] = "Konfiguration krävs",
         ["udev_not_installed"] = "udev-regler ej installerade. Kör install.sh för full funktionalitet (batterigräns, fläktstyrning, etc.)",
 

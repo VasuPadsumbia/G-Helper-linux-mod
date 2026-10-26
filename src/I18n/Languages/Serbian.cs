@@ -201,6 +201,9 @@ public static class Serbian
         ["refresh_rate_format"] = "Учестаност освежавања: {0}Hz",
         ["auto_screen_ac"] = "Ауто: {0}Hz, overdrive укључен",
         ["auto_screen_battery"] = "Ауто: 60Hz, overdrive искључен",
+        ["screen_tip_auto"] = "Postavlja 60 Hz radi uštede baterije i vraća kada je priključen",
+        ["screen_tip_min"] = "Osvežavanje od 60 Hz radi uštede baterije",
+        ["screen_tip_max"] = "Maksimalno osvežavanje za manje kašnjenje",
         ["setup_required"] = "Потребно подешавање",
         ["udev_not_installed"] = "udev правила нису инсталирана. Покрените install.sh за пуну функционалност (ограничење батерије, контрола вентилатора, итд.)",
 

@@ -201,6 +201,9 @@ public static class Malay
         ["refresh_rate_format"] = "Kadar segar semula: {0} Hz",
         ["auto_screen_ac"] = "Auto: {0} Hz, overdrive hidup",
         ["auto_screen_battery"] = "Auto: 60 Hz, overdrive mati",
+        ["screen_tip_auto"] = "Menetapkan 60Hz untuk menjimatkan bateri, dan kembali apabila dipasang",
+        ["screen_tip_min"] = "Kadar segar semula 60Hz untuk menjimatkan bateri",
+        ["screen_tip_max"] = "Kadar segar semula maksimum untuk kependaman lebih rendah",
         ["setup_required"] = "Persediaan diperlukan",
         ["udev_not_installed"] = "Peraturan udev tidak dipasang. Jalankan install.sh untuk fungsi penuh (had bateri, kawalan kipas, dll.)",
 

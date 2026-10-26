@@ -201,6 +201,9 @@ public static class Korean
         ["refresh_rate_format"] = "주사율: {0}Hz",
         ["auto_screen_ac"] = "자동: {0}Hz, 오버드라이브 켜기",
         ["auto_screen_battery"] = "자동: 60Hz, 오버드라이브 끄기",
+        ["screen_tip_auto"] = "배터리 사용 시 60Hz로 설정하고 전원 연결 시 되돌립니다",
+        ["screen_tip_min"] = "배터리 절약을 위한 60Hz 주사율",
+        ["screen_tip_max"] = "낮은 지연 시간을 위한 최대 주사율",
         ["setup_required"] = "설정이 필요합니다",
         ["udev_not_installed"] = "udev 규칙이 설치되지 않았습니다. 전체 기능(배터리 제한, 팬 제어 등)을 사용하려면 install.sh를 실행하세요",
 

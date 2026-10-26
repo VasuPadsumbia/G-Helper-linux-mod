@@ -198,6 +198,9 @@ public static class Hungarian
         ["refresh_rate_format"] = "Frissítési ráta: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, overdrive be",
         ["auto_screen_battery"] = "Auto: 60Hz, overdrive ki",
+        ["screen_tip_auto"] = "Akkumulátoron 60 Hz-re vált, töltőn visszaáll",
+        ["screen_tip_min"] = "60 Hz frissítési gyakoriság az akkumulátor kíméléséhez",
+        ["screen_tip_max"] = "Maximális frissítési gyakoriság a kisebb késleltetésért",
         ["setup_required"] = "Beállítás szükséges",
         ["udev_not_installed"] = "Az udev szabályok nincsenek telepítve. Futtassa az install.sh-t a teljes funkcionalitáshoz (akkumulátor korlát, ventilátor vezérlés stb.)",
 

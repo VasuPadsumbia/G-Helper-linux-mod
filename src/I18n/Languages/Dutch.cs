@@ -198,6 +198,9 @@ public static class Dutch
         ["refresh_rate_format"] = "Verversingssnelheid: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, overdrive aan",
         ["auto_screen_battery"] = "Auto: 60Hz, overdrive uit",
+        ["screen_tip_auto"] = "Zet 60Hz om batterij te sparen, en terug wanneer aangesloten",
+        ["screen_tip_min"] = "60Hz verversingssnelheid om batterij te sparen",
+        ["screen_tip_max"] = "Maximale verversingssnelheid voor lagere latentie",
         ["setup_required"] = "Configuratie vereist",
         ["udev_not_installed"] = "udev-regels niet geïnstalleerd. Voer install.sh uit voor volledige functionaliteit (acculimiet, ventilatorregeling, enz.)",
 

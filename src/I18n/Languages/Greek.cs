@@ -201,6 +201,9 @@ public static class Greek
         ["refresh_rate_format"] = "Ρυθμός ανανέωσης: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, overdrive ενεργό",
         ["auto_screen_battery"] = "Auto: 60Hz, overdrive ανενεργό",
+        ["screen_tip_auto"] = "Ορίζει 60Hz για εξοικονόμηση μπαταρίας και επαναφέρει όταν συνδεθεί",
+        ["screen_tip_min"] = "Ρυθμός ανανέωσης 60Hz για εξοικονόμηση μπαταρίας",
+        ["screen_tip_max"] = "Μέγιστος ρυθμός ανανέωσης για χαμηλότερη καθυστέρηση",
         ["setup_required"] = "Απαιτείται ρύθμιση",
         ["udev_not_installed"] = "Οι κανόνες udev δεν έχουν εγκατασταθεί. Εκτελέστε install.sh για πλήρη λειτουργικότητα (όριο μπαταρίας, έλεγχος ανεμιστήρων κ.λπ.)",
 

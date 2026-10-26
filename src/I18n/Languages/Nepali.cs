@@ -201,6 +201,9 @@ public static class Nepali
         ["refresh_rate_format"] = "रिफ्रेस दर: {0} Hz",
         ["auto_screen_ac"] = "स्वतः: {0} Hz, overdrive चालु",
         ["auto_screen_battery"] = "स्वतः: 60 Hz, overdrive बन्द",
+        ["screen_tip_auto"] = "ब्याट्री बचाउन 60Hz बनाउँछ, चार्जर जोडेपछि फर्काउँछ",
+        ["screen_tip_min"] = "ब्याट्री बचाउन 60Hz रिफ्रेस रेट",
+        ["screen_tip_max"] = "कम लेटेन्सीका लागि अधिकतम रिफ्रेस रेट",
         ["setup_required"] = "सेटअप आवश्यक",
         ["udev_not_installed"] = "udev नियमहरू स्थापना भएका छैनन्। पूर्ण कार्यक्षमताका लागि install.sh चलाउनुहोस् (ब्याट्री सीमा, पङ्खा नियन्त्रण, आदि)",
 

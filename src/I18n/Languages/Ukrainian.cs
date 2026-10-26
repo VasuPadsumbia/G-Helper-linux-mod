@@ -198,6 +198,9 @@ public static class Ukrainian
         ["refresh_rate_format"] = "Частота оновлення: {0}Hz",
         ["auto_screen_ac"] = "Авто: {0}Hz, overdrive увімк.",
         ["auto_screen_battery"] = "Авто: 60Hz, overdrive вимк.",
+        ["screen_tip_auto"] = "Вмикає 60 Гц для економії батареї та повертає під час заряджання",
+        ["screen_tip_min"] = "Частота оновлення 60 Гц для економії батареї",
+        ["screen_tip_max"] = "Максимальна частота оновлення для меншої затримки",
         ["setup_required"] = "Потрібне налаштування",
         ["udev_not_installed"] = "Правила udev не встановлені. Запустіть install.sh для повної функціональності (ліміт батареї, контроль вентиляторів тощо)",
 

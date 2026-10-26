@@ -198,6 +198,9 @@ public static class German
         ["refresh_rate_format"] = "Bildwiederholrate: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, Overdrive an",
         ["auto_screen_battery"] = "Auto: 60Hz, Overdrive aus",
+        ["screen_tip_auto"] = "Stellt im Akkubetrieb 60 Hz ein und am Netzteil wieder zurück",
+        ["screen_tip_min"] = "60 Hz Bildwiederholrate, um Akku zu sparen",
+        ["screen_tip_max"] = "Maximale Bildwiederholrate für geringere Latenz",
         ["setup_required"] = "Einrichtung erforderlich",
         ["udev_not_installed"] = "udev-Regeln nicht installiert. Führen Sie install.sh aus für volle Funktionalität (Akkulimit, Lüftersteuerung usw.)",
 

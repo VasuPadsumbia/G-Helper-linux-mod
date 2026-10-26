@@ -201,6 +201,9 @@ public static class Hindi
         ["refresh_rate_format"] = "रिफ्रेश दर: {0} Hz",
         ["auto_screen_ac"] = "ऑटो: {0} Hz, overdrive चालू",
         ["auto_screen_battery"] = "ऑटो: 60 Hz, overdrive बंद",
+        ["screen_tip_auto"] = "बैटरी बचाने के लिए 60Hz करता है, चार्जर लगाने पर वापस",
+        ["screen_tip_min"] = "बैटरी बचाने के लिए 60Hz रिफ्रेश रेट",
+        ["screen_tip_max"] = "कम लेटेंसी के लिए अधिकतम रिफ्रेश रेट",
         ["setup_required"] = "सेटअप आवश्यक",
         ["udev_not_installed"] = "udev नियम स्थापित नहीं हैं। पूर्ण कार्यक्षमता के लिए install.sh चलाएँ (बैटरी सीमा, पंखा नियंत्रण, आदि)",
 

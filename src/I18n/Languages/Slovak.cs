@@ -201,6 +201,9 @@ public static class Slovak
         ["refresh_rate_format"] = "Obnovovacia frekvencia: {0} Hz",
         ["auto_screen_ac"] = "Auto: {0} Hz, overdrive zapnutý",
         ["auto_screen_battery"] = "Auto: 60 Hz, overdrive vypnutý",
+        ["screen_tip_auto"] = "Na batérii nastaví 60 Hz pre úsporu, po pripojení späť",
+        ["screen_tip_min"] = "Obnovovacia frekvencia 60 Hz pre úsporu batérie",
+        ["screen_tip_max"] = "Maximálna obnovovacia frekvencia pre nižšiu odozvu",
         ["setup_required"] = "Vyžaduje sa nastavenie",
         ["udev_not_installed"] = "Pravidlá udev nie sú nainštalované. Pre plnú funkčnosť spustite install.sh (limit batérie, ovládanie ventilátorov atď.)",
 

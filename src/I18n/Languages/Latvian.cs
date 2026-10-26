@@ -201,6 +201,9 @@ public static class Latvian
         ["refresh_rate_format"] = "Atsvaidzes intensitāte: {0} Hz",
         ["auto_screen_ac"] = "Automātiski: {0} Hz, overdrive ieslēgts",
         ["auto_screen_battery"] = "Automātiski: 60 Hz, overdrive izslēgts",
+        ["screen_tip_auto"] = "Iestata 60 Hz akumulatora taupīšanai un atjauno, kad pievienots lādētājs",
+        ["screen_tip_min"] = "60 Hz atsvaidzes intensitāte akumulatora taupīšanai",
+        ["screen_tip_max"] = "Maksimālā atsvaidzes intensitāte mazākai aizturei",
         ["setup_required"] = "Nepieciešama iestatīšana",
         ["udev_not_installed"] = "udev noteikumi nav instalēti. Pilnai funkcionalitātei palaidiet install.sh (akumulatora ierobežojums, ventilatoru vadība utt.)",
 

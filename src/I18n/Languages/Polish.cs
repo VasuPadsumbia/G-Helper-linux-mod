@@ -198,6 +198,9 @@ public static class Polish
         ["refresh_rate_format"] = "Częstotliwość odświeżania: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, overdrive wł.",
         ["auto_screen_battery"] = "Auto: 60Hz, overdrive wył.",
+        ["screen_tip_auto"] = "Ustawia 60 Hz, aby oszczędzać baterię, i przywraca po podłączeniu",
+        ["screen_tip_min"] = "Częstotliwość odświeżania 60 Hz dla oszczędzania baterii",
+        ["screen_tip_max"] = "Maksymalna częstotliwość odświeżania dla mniejszych opóźnień",
         ["setup_required"] = "Wymagana konfiguracja",
         ["udev_not_installed"] = "Reguły udev nie są zainstalowane. Uruchom install.sh, aby uzyskać pełną funkcjonalność (limit baterii, kontrola wentylatorów itp.)",
 

@@ -201,6 +201,9 @@ public static class Finnish
         ["refresh_rate_format"] = "Virkistystaajuus: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, overdrive päällä",
         ["auto_screen_battery"] = "Auto: 60Hz, overdrive pois",
+        ["screen_tip_auto"] = "Asettaa 60 Hz akun säästämiseksi ja palauttaa, kun laturi kytketään",
+        ["screen_tip_min"] = "60 Hz virkistystaajuus akun säästämiseksi",
+        ["screen_tip_max"] = "Suurin virkistystaajuus pienempää viivettä varten",
         ["setup_required"] = "Asennus vaaditaan",
         ["udev_not_installed"] = "udev-sääntöjä ei ole asennettu. Suorita install.sh täyden toiminnallisuuden saamiseksi (akun raja, tuuletinhallinta jne.)",
 

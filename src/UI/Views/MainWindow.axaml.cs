@@ -1353,21 +1353,23 @@ public partial class MainWindow : Window
 
     private void ButtonScreenAuto_Click(object? sender, RoutedEventArgs e)
     {
-        bool wasAuto = Helpers.AppConfig.Is("screen_auto");
-        if (wasAuto)
-        {
-            // Toggle off, keep current rate, just disable auto
-            Helpers.AppConfig.Set("screen_auto", 0);
-            Helpers.Logger.WriteLine("Screen auto: disabled");
-        }
-        else
-        {
-            // Enable auto and apply immediately
-            Helpers.AppConfig.Set("screen_auto", 1);
-            (App.Current as App)?.AutoScreen();
-        }
+        // Like G-Helper for Windows: Auto always turns on and applies now
+        // (upstream toggled it off on a second click, which looked like it did nothing).
+        // Picking 60Hz or the max rate turns Auto off.
+        Helpers.AppConfig.Set("screen_auto", 1);
+        (App.Current as App)?.AutoScreen();
         RefreshScreen();
     }
+
+    private void ScreenButton_PointerEntered(object? sender, Avalonia.Input.PointerEventArgs e)
+    {
+        labelTipScreen.Text = sender == buttonScreenAuto ? Labels.Get("screen_tip_auto")
+            : sender == button60Hz ? Labels.Get("screen_tip_min")
+            : Labels.Get("screen_tip_max");
+    }
+
+    private void ScreenButton_PointerExited(object? sender, Avalonia.Input.PointerEventArgs e)
+        => labelTipScreen.Text = "";
 
     private void Button60Hz_Click(object? sender, RoutedEventArgs e)
     {

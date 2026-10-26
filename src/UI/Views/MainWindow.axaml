@@ -198,22 +198,25 @@
                     <!-- Screen buttons, equal width -->
                     <UniformGrid Rows="1" Columns="3" Margin="0,0">
                         <Button x:Name="buttonScreenAuto" Classes="ghelper"
-                                Margin="0,0,3,0" Click="ButtonScreenAuto_Click"
+                                Margin="0,0,3,0" Click="ButtonScreenAuto_Click" PointerEntered="ScreenButton_PointerEntered" PointerExited="ScreenButton_PointerExited"
                                 Height="36">
                             <TextBlock Text="Auto" HorizontalAlignment="Center" FontSize="11" />
                         </Button>
                         <Button x:Name="button60Hz" Classes="ghelper"
-                                Margin="3,0" Click="Button60Hz_Click"
+                                Margin="3,0" Click="Button60Hz_Click" PointerEntered="ScreenButton_PointerEntered" PointerExited="ScreenButton_PointerExited"
                                 Height="36">
                             <TextBlock Text="60Hz" HorizontalAlignment="Center" FontSize="11" />
                         </Button>
                         <Button x:Name="button120Hz" Classes="ghelper"
-                                Margin="3,0,0,0" Click="Button120Hz_Click"
+                                Margin="3,0,0,0" Click="Button120Hz_Click" PointerEntered="ScreenButton_PointerEntered" PointerExited="ScreenButton_PointerExited"
                                 Height="36">
                             <TextBlock x:Name="labelHighRefresh" Text="120Hz"
                                        HorizontalAlignment="Center" FontSize="11" />
                         </Button>
                     </UniformGrid>
+                    <!-- mod: hover hint, as in G-Helper for Windows (labelTipScreen) -->
+                    <TextBlock x:Name="labelTipScreen" Classes="label-dim"
+                               Text="" Margin="2,6,2,0" TextWrapping="Wrap" />
                     <!-- MiniLED button, only visible on supported models -->
                     <Button x:Name="buttonMiniled" Classes="ghelper"
                             Margin="0,4,0,0" Click="ButtonMiniled_Click"

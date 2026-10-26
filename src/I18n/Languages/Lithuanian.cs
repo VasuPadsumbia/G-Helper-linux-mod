@@ -201,6 +201,9 @@ public static class Lithuanian
         ["refresh_rate_format"] = "Atnaujinimo dažnis: {0} Hz",
         ["auto_screen_ac"] = "Automatinis: {0} Hz, overdrive įjungtas",
         ["auto_screen_battery"] = "Automatinis: 60 Hz, overdrive išjungtas",
+        ["screen_tip_auto"] = "Nustato 60 Hz baterijai taupyti ir grąžina prijungus kroviklį",
+        ["screen_tip_min"] = "60 Hz atnaujinimo dažnis baterijai taupyti",
+        ["screen_tip_max"] = "Didžiausias atnaujinimo dažnis mažesnei delsai",
         ["setup_required"] = "Reikia sąrankos",
         ["udev_not_installed"] = "udev taisyklės neįdiegtos. Visam funkcionalumui paleiskite install.sh (baterijos riba, ventiliatorių valdymas ir kt.)",
 

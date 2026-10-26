@@ -201,6 +201,9 @@ public static class Macedonian
         ["refresh_rate_format"] = "Стапка на освежување: {0}Hz",
         ["auto_screen_ac"] = "Авто: {0}Hz, overdrive вклучен",
         ["auto_screen_battery"] = "Авто: 60Hz, overdrive исклучен",
+        ["screen_tip_auto"] = "Поставува 60Hz за заштеда на батерија и враќа кога е приклучен",
+        ["screen_tip_min"] = "Освежување од 60Hz за заштеда на батерија",
+        ["screen_tip_max"] = "Максимално освежување за помало доцнење",
         ["setup_required"] = "Потребно поставување",
         ["udev_not_installed"] = "udev правилата не се инсталирани. Извршете install.sh за целосна функционалност (ограничување на батерија, контрола на вентилатори, итн.)",
 

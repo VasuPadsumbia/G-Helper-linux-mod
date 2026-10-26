@@ -198,6 +198,9 @@ public static class Czech
         ["refresh_rate_format"] = "Obnovovací frekvence: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, overdrive zap.",
         ["auto_screen_battery"] = "Auto: 60Hz, overdrive vyp.",
+        ["screen_tip_auto"] = "Na baterii nastaví 60 Hz pro úsporu, po připojení zpět",
+        ["screen_tip_min"] = "Obnovovací frekvence 60 Hz pro úsporu baterie",
+        ["screen_tip_max"] = "Maximální obnovovací frekvence pro nižší odezvu",
         ["setup_required"] = "Vyžadováno nastavení",
         ["udev_not_installed"] = "Pravidla udev nejsou nainstalována. Spusťte install.sh pro plnou funkčnost (limit baterie, ovládání ventilátorů atd.)",
 

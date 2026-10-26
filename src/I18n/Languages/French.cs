@@ -198,6 +198,9 @@ public static class French
         ["refresh_rate_format"] = "Taux de rafraîchissement : {0}Hz",
         ["auto_screen_ac"] = "Auto : {0}Hz, overdrive activé",
         ["auto_screen_battery"] = "Auto : 60Hz, overdrive désactivé",
+        ["screen_tip_auto"] = "Passe à 60 Hz pour économiser la batterie, et revient une fois branché",
+        ["screen_tip_min"] = "Taux de rafraîchissement de 60 Hz pour économiser la batterie",
+        ["screen_tip_max"] = "Taux de rafraîchissement maximal pour une latence réduite",
         ["setup_required"] = "Configuration requise",
         ["udev_not_installed"] = "Règles udev non installées. Exécutez install.sh pour la fonctionnalité complète (limite de batterie, contrôle des ventilateurs, etc.)",
 

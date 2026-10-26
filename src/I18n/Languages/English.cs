@@ -203,6 +203,9 @@ public static class English
         ["refresh_rate_format"] = "Refresh rate: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, overdrive on",
         ["auto_screen_battery"] = "Auto: 60Hz, overdrive off",
+        ["screen_tip_auto"] = "Sets 60Hz to save battery, and back when plugged",
+        ["screen_tip_min"] = "60Hz refresh rate to save battery",
+        ["screen_tip_max"] = "Max refresh rate for lower latency",
         ["setup_required"] = "Setup Required",
         ["udev_not_installed"] = "udev rules not installed. Run install.sh for full functionality (battery limit, fan control, etc.)",
 

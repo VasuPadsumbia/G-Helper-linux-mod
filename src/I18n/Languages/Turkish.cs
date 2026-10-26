@@ -198,6 +198,9 @@ public static class Turkish
         ["refresh_rate_format"] = "Yenileme hızı: {0}Hz",
         ["auto_screen_ac"] = "Otomatik: {0}Hz, overdrive açık",
         ["auto_screen_battery"] = "Otomatik: 60Hz, overdrive kapalı",
+        ["screen_tip_auto"] = "Pil tasarrufu için 60 Hz'e ayarlar, şarja takılınca geri alır",
+        ["screen_tip_min"] = "Pil tasarrufu için 60 Hz yenileme hızı",
+        ["screen_tip_max"] = "Daha düşük gecikme için en yüksek yenileme hızı",
         ["setup_required"] = "Kurulum Gerekli",
         ["udev_not_installed"] = "udev kuralları yüklü değil. Tam işlevsellik için install.sh dosyasını çalıştırın (pil limiti, fan kontrolü vb.)",
 

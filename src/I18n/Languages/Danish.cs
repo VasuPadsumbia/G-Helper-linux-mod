@@ -201,6 +201,9 @@ public static class Danish
         ["refresh_rate_format"] = "Opdateringshastighed: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, overdrive til",
         ["auto_screen_battery"] = "Auto: 60Hz, overdrive fra",
+        ["screen_tip_auto"] = "Skifter til 60Hz for at spare batteri og tilbage, når den er tilsluttet",
+        ["screen_tip_min"] = "60Hz opdateringshastighed for at spare batteri",
+        ["screen_tip_max"] = "Maksimal opdateringshastighed for lavere forsinkelse",
         ["setup_required"] = "Opsætning påkrævet",
         ["udev_not_installed"] = "udev-regler er ikke installeret. Kør install.sh for fuld funktionalitet (batterigrænse, blæserstyring osv.)",
 

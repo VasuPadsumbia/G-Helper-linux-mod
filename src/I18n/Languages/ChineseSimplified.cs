@@ -201,6 +201,9 @@ public static class ChineseSimplified
         ["refresh_rate_format"] = "刷新率：{0}Hz",
         ["auto_screen_ac"] = "自动：{0}Hz，超频开启",
         ["auto_screen_battery"] = "自动：60Hz，超频关闭",
+        ["screen_tip_auto"] = "使用电池时设为 60Hz 以省电，接通电源后恢复",
+        ["screen_tip_min"] = "60Hz 刷新率以节省电量",
+        ["screen_tip_max"] = "最高刷新率，降低延迟",
         ["setup_required"] = "需要设置",
         ["udev_not_installed"] = "udev 规则未安装。请运行 install.sh 以获得完整功能（电池限制、风扇控制等）",
 

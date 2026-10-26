@@ -201,6 +201,9 @@ public static class Filipino
         ["refresh_rate_format"] = "Refresh rate: {0} Hz",
         ["auto_screen_ac"] = "Auto: {0} Hz, naka-on ang overdrive",
         ["auto_screen_battery"] = "Auto: 60 Hz, naka-off ang overdrive",
+        ["screen_tip_auto"] = "Ginagawang 60Hz para makatipid sa baterya, at ibinabalik kapag naka-charge",
+        ["screen_tip_min"] = "60Hz refresh rate para makatipid sa baterya",
+        ["screen_tip_max"] = "Pinakamataas na refresh rate para sa mas mababang latency",
         ["setup_required"] = "Kailangan ng setup",
         ["udev_not_installed"] = "Hindi naka-install ang mga udev rule. Patakbuhin ang install.sh para sa buong functionality (limitasyon ng baterya, kontrol ng fan, atbp.)",
 

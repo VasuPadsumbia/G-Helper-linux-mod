@@ -198,6 +198,9 @@ public static class Spanish
         ["refresh_rate_format"] = "Tasa de refresco: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, overdrive activado",
         ["auto_screen_battery"] = "Auto: 60Hz, overdrive desactivado",
+        ["screen_tip_auto"] = "Pone 60 Hz para ahorrar batería y vuelve al conectar el cargador",
+        ["screen_tip_min"] = "Frecuencia de actualización de 60 Hz para ahorrar batería",
+        ["screen_tip_max"] = "Frecuencia de actualización máxima para menor latencia",
         ["setup_required"] = "Configuración necesaria",
         ["udev_not_installed"] = "Reglas udev no instaladas. Ejecute install.sh para funcionalidad completa (límite de batería, control de ventiladores, etc.)",
 

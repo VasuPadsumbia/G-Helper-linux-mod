@@ -198,6 +198,9 @@ public static class Romanian
         ["refresh_rate_format"] = "Rată de reîmprospătare: {0}Hz",
         ["auto_screen_ac"] = "Auto: {0}Hz, overdrive pornit",
         ["auto_screen_battery"] = "Auto: 60Hz, overdrive oprit",
+        ["screen_tip_auto"] = "Setează 60 Hz pentru a economisi bateria și revine la conectare",
+        ["screen_tip_min"] = "Rată de reîmprospătare de 60 Hz pentru economisirea bateriei",
+        ["screen_tip_max"] = "Rată de reîmprospătare maximă pentru latență redusă",
         ["setup_required"] = "Configurare necesară",
         ["udev_not_installed"] = "Regulile udev nu sunt instalate. Rulați install.sh pentru funcționalitate completă (limită baterie, control ventilatoare etc.)",
 

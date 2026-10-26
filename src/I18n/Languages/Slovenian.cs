@@ -201,6 +201,9 @@ public static class Slovenian
         ["refresh_rate_format"] = "Hitrost osveževanja: {0} Hz",
         ["auto_screen_ac"] = "Samodejno: {0} Hz, overdrive vklopljen",
         ["auto_screen_battery"] = "Samodejno: 60 Hz, overdrive izklopljen",
+        ["screen_tip_auto"] = "Nastavi 60 Hz za varčevanje z baterijo in povrne ob priklopu",
+        ["screen_tip_min"] = "Osveževanje 60 Hz za varčevanje z baterijo",
+        ["screen_tip_max"] = "Največje osveževanje za manjšo zakasnitev",
         ["setup_required"] = "Potrebna namestitev",
         ["udev_not_installed"] = "Pravila udev niso nameščena. Za polno funkcionalnost zaženite install.sh (omejitev baterije, nadzor ventilatorjev itd.)",
 

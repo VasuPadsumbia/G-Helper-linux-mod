@@ -201,6 +201,9 @@ public static class Japanese
         ["refresh_rate_format"] = "リフレッシュレート: {0}Hz",
         ["auto_screen_ac"] = "自動: {0}Hz、オーバードライブ オン",
         ["auto_screen_battery"] = "自動: 60Hz、オーバードライブ オフ",
+        ["screen_tip_auto"] = "バッテリー駆動時は 60Hz にして節電し、電源接続時に戻します",
+        ["screen_tip_min"] = "バッテリー節約のための 60Hz リフレッシュレート",
+        ["screen_tip_max"] = "低遅延のための最大リフレッシュレート",
         ["setup_required"] = "セットアップが必要",
         ["udev_not_installed"] = "udev ルールがインストールされていません。完全な機能（バッテリー制限、ファン制御など）を利用するには install.sh を実行してください",
 

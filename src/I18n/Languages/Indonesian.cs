@@ -201,6 +201,9 @@ public static class Indonesian
         ["refresh_rate_format"] = "Laju penyegaran: {0}Hz",
         ["auto_screen_ac"] = "Otomatis: {0}Hz, overdrive aktif",
         ["auto_screen_battery"] = "Otomatis: 60Hz, overdrive nonaktif",
+        ["screen_tip_auto"] = "Mengatur 60Hz untuk menghemat baterai, dan kembali saat dicolokkan",
+        ["screen_tip_min"] = "Refresh rate 60Hz untuk menghemat baterai",
+        ["screen_tip_max"] = "Refresh rate maksimum untuk latensi lebih rendah",
         ["setup_required"] = "Pengaturan Diperlukan",
         ["udev_not_installed"] = "Aturan udev belum dipasang. Jalankan install.sh untuk fungsionalitas penuh (batas baterai, kontrol kipas, dll.)",
 
