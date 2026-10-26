@@ -51,3 +51,5 @@ Desktop.ini
 # Python bytecode
 __pycache__/
 *.pyc
+# Locally built privileged helper (CI builds it from source)
+vendor/gpu-helper/gpu-helper
