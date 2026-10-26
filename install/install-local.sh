@@ -629,7 +629,13 @@ _step 4 "DEPLOYING UDEV RULESET"
 # Always write + reload + trigger udev rules unconditionally.
 # The rules list may grow between releases, and the daemon may not have
 # loaded them even if the file on disk looks the same.
-install -m 644 "$SCRIPT_DIR/90-ghelper.rules" "$UDEV_DEST"
+# The app checks this file against its embedded copy with the "#@section"
+# marker lines removed (Installer.UdevRulesContent); strip them here too so the
+# app doesn't report the rules as outdated on first start.
+UDEV_TMP="$(mktemp)"
+sed '/^[[:space:]]*#@section /d' "$SCRIPT_DIR/90-ghelper.rules" > "$UDEV_TMP"
+install -m 644 "$UDEV_TMP" "$UDEV_DEST"
+rm -f "$UDEV_TMP"
 _inject "udev rules → $UDEV_DEST"
 
 udevadm control --reload-rules
@@ -646,6 +652,20 @@ if modprobe i2c-dev 2>/dev/null; then
 else
     _warn "could not load kernel module → i2c-dev (NumberPad LED control may be unavailable)"
 fi
+
+# Load the same modules on every boot. Content must match the app's
+# Installer.KernelModulesContent (default mode), or it reports the file as missing/outdated.
+MODULES_CONF="/etc/modules-load.d/ghelper.conf"
+{
+    echo "# Kernel modules required by G-Helper"
+    echo "uinput"
+    echo "i2c-dev"
+    if grep -qi -E 'lenovo|motorola' /sys/class/dmi/id/sys_vendor 2>/dev/null; then
+        printf '%s\n' ideapad_laptop lenovo_wmi_gamezone lenovo_wmi_other lenovo_wmi_hotkey_utilities
+    fi
+} > "$MODULES_CONF"
+chmod 644 "$MODULES_CONF"
+_inject "kernel modules → $MODULES_CONF"
 
 udevadm trigger
 _info "udev trigger fired — re-applying all RUN commands"
