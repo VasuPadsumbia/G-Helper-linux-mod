@@ -27,7 +27,21 @@ public sealed record PowerLimitBounds(int Min, int Max, bool FromFirmware)
     }
 
     public static PowerLimitBounds For(IHardwareControl? wmi, AttrDef attr, int fallbackMin, int fallbackMax)
-        => Resolve(wmi?.GetAttributeRange(attr), fallbackMin, fallbackMax);
+    {
+        var bounds = Resolve(wmi?.GetAttributeRange(attr), fallbackMin, fallbackMax);
+
+        // mod: on AMD, SetPptLimit routes PPT writes to the SMU through ryzenadj,
+        // which isn't bound by the asus-armoury min_value (e.g. 15/25/35 W on a
+        // GV301RE). Offer G-Helper for Windows' floor there, plus 1 W: Sanitize
+        // treats exactly fallbackMin as a poisoned legacy readback (issue #151).
+        int smuFloor = fallbackMin + 1;
+        if (bounds.Min > smuFloor
+            && RyzenPower.PptToParam(attr.LegacyName) is { } param
+            && RyzenPower.IsSupported(param))
+            bounds = bounds with { Min = smuFloor };
+
+        return bounds;
+    }
 
     public bool Contains(int watts) => watts >= Min && watts <= Max;
 
