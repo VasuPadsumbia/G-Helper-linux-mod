@@ -1503,6 +1503,7 @@ public partial class FansWindow : Window
 
             wmi.SetPptLimit(Platform.Linux.AsusAttributes.PptPl1Spl, pl1);
             Helpers.AppConfig.SetMode("limit_slow", pl1);
+            Mode.ModeControl.SetCustomSpl(pl1);
 
             wmi.SetPptLimit(Platform.Linux.AsusAttributes.PptPl2Sppt, pl2);
             Helpers.AppConfig.SetMode("limit_fast", pl2);

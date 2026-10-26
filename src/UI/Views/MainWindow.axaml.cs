@@ -58,6 +58,11 @@ public partial class MainWindow : Window
         panelAudio.IsVisible = !Helpers.AppConfig.Is("disable_audio");
         Labels.LanguageChanged += () => Avalonia.Threading.Dispatcher.UIThread.Post(() => ApplyLabels());
         InitDonate();
+        GHelper.Linux.Mode.ModeControl.CustomSplChanged +=
+            () => Avalonia.Threading.Dispatcher.UIThread.Post(RefreshPerformanceMode);
+        // Click a fan readout to switch between RPM and percent, as in G-Helper for Windows.
+        labelCPUFan.PointerPressed += (_, _) => ToggleFanUnits();
+        labelGPUFan.PointerPressed += (_, _) => ToggleFanUnits();
 
         // Refresh timer for live sensor data
         _refreshTimer = new DispatcherTimer
@@ -353,6 +358,12 @@ public partial class MainWindow : Window
         }
     }
 
+    private void ToggleFanUnits()
+    {
+        Fan.FanSensorControl.FanRpm = !Fan.FanSensorControl.FanRpm;
+        RefreshSensorData();
+    }
+
     private void RefreshSensorData()
     {
         try
@@ -444,8 +455,10 @@ public partial class MainWindow : Window
             _ => Labels.Get("mode_unknown")
         };
 
-        // Combined header: "Mode: Balanced".
-        labelPerf.Text = Labels.Format("mode_prefix", modeName);
+        // Combined header: "Mode: Balanced", plus the custom SPL like G-Helper
+        // for Windows ("Mode: Turbo 15W").
+        int customSpl = GHelper.Linux.Mode.ModeControl.CustomSpl;
+        labelPerf.Text = Labels.Format("mode_prefix", modeName) + (customSpl > 0 ? $" {customSpl}W" : "");
         labelPerfMode.Text = modeName;
         UpdatePerfButtons();
     }
