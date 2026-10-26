@@ -207,9 +207,12 @@ public class App : Application
             {
                 if (cmd == "toggle-osk")
                     Avalonia.Threading.Dispatcher.UIThread.Post(ToggleOskWindow);
+                else if (cmd == "toggle-overlay")
+                    Avalonia.Threading.Dispatcher.UIThread.Post(GHelper.Linux.Overlay.OverlayControl.Toggle);
             });
             if (oskStart)
                 Avalonia.Threading.Dispatcher.UIThread.Post(ToggleOskWindow);
+            Avalonia.Threading.Dispatcher.UIThread.Post(GHelper.Linux.Overlay.OverlayControl.RestoreOnStart);
 
             // Controller-driven focus navigation (game mode / handhelds).
             GHelper.Linux.Input.GamepadNav.Start();
@@ -913,6 +916,14 @@ public class App : Application
         var oskItem = new NativeMenuItem(Labels.Get("osk_tray_label"));
         oskItem.Click += (_, _) => ToggleOskWindow();
         menu.Add(oskItem);
+
+        // mod: overlay on/off, as in G-Helper for Windows' tray menu.
+        string BuildOverlayHeader() =>
+            (GHelper.Linux.Overlay.OverlaySettings.Enabled ? "✓ " : "   ") + Labels.Get("overlay");
+        var overlayItem = new NativeMenuItem(BuildOverlayHeader());
+        overlayItem.Click += (_, _) => GHelper.Linux.Overlay.OverlayControl.Toggle();
+        GHelper.Linux.Overlay.OverlayControl.EnabledChanged += () => overlayItem.Header = BuildOverlayHeader();
+        menu.Add(overlayItem);
 
         menu.Add(new NativeMenuItemSeparator());
 

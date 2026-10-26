@@ -43,9 +43,9 @@ public partial class MainWindow : Window
     private TranslateTransform? _coinTransform;
 
     // Mode colors from G-Helper for Windows (app/UI/RForm.cs)
-    private static readonly Color ColorEco = Color.Parse("#06B48A");
-    private static readonly Color ColorStandard = Color.Parse("#3AAEEF");
-    private static readonly Color ColorTurbo = Color.Parse("#FF2020");
+    internal static readonly Color ColorEco = Color.Parse("#06B48A");
+    internal static readonly Color ColorStandard = Color.Parse("#3AAEEF");
+    internal static readonly Color ColorTurbo = Color.Parse("#FF2020");
     private static readonly Color ColorGray = Color.Parse("#A8A8A8");
     private static readonly Color ButtonMain = Color.Parse("#2E2E2E");
     private static readonly IBrush TransparentBrush = Brushes.Transparent;
@@ -62,6 +62,13 @@ public partial class MainWindow : Window
             () => Avalonia.Threading.Dispatcher.UIThread.Post(RefreshPerformanceMode);
         // Click a fan readout to switch between RPM and percent, as in G-Helper for Windows.
         labelCPUFan.PointerPressed += (_, _) => ToggleFanUnits();
+        buttonOverlay.PointerReleased += (_, e) =>
+        {
+            if (e.InitialPressMouseButton == Avalonia.Input.MouseButton.Right)
+                GHelper.Linux.Overlay.OverlayControl.Toggle();
+        };
+        GHelper.Linux.Overlay.OverlayControl.EnabledChanged += RefreshOverlayButton;
+        RefreshOverlayButton();
         labelGPUFan.PointerPressed += (_, _) => ToggleFanUnits();
 
         // Refresh timer for live sensor data
@@ -356,6 +363,26 @@ public partial class MainWindow : Window
         {
             tb.Text = text;
         }
+    }
+
+    private OverlayConfigWindow? _overlayConfigWindow;
+
+    private void ButtonOverlay_Click(object? sender, RoutedEventArgs e)
+    {
+        if (_overlayConfigWindow == null)
+        {
+            _overlayConfigWindow = new OverlayConfigWindow();
+            _overlayConfigWindow.Closed += (_, _) => _overlayConfigWindow = null;
+            _overlayConfigWindow.Show(this);
+        }
+        else
+            _overlayConfigWindow.Activate();
+    }
+
+    private void RefreshOverlayButton()
+    {
+        labelOverlayButton.Text = Labels.Get("overlay");
+        SetButtonActive(buttonOverlay, GHelper.Linux.Overlay.OverlaySettings.Enabled, ColorStandard);
     }
 
     private void ToggleFanUnits()
@@ -2802,7 +2829,7 @@ public partial class MainWindow : Window
     /// color, lightened toward the top, plus a wash of that color (alpha 32) that
     /// fades out over the top 20% of the button.
     /// </summary>
-    private static void SetButtonActive(Button button, bool active, Color color)
+    internal static void SetButtonActive(Button button, bool active, Color color)
     {
         button.BorderThickness = new Avalonia.Thickness(2);
         if (active)

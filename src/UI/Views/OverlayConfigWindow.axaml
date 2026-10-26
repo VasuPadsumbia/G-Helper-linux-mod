@@ -1,0 +1,86 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="GHelper.Linux.UI.Views.OverlayConfigWindow"
+        Title="Overlay"
+        Width="420"
+        SizeToContent="Height"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False"
+        Background="#1C1C1C"
+        Icon="avares://ghelper/UI/Assets/favicon.ico">
+
+    <!-- mod: overlay settings, laid out after G-Helper for Windows' OverlayConfig -->
+    <StackPanel Margin="12" Spacing="6">
+        <Border Classes="panel">
+            <StackPanel Spacing="8">
+                <Grid ColumnDefinitions="*,*">
+                    <CheckBox Grid.Column="0" x:Name="checkEnable" Content="Overlay" />
+                    <CheckBox Grid.Column="1" x:Name="checkGameOnly" Content="Overlay only in games" />
+                </Grid>
+
+                <UniformGrid Rows="1" Columns="4" ColumnSpacing="6">
+                    <Button x:Name="buttonLight" Classes="ghelper" Height="36">
+                        <TextBlock x:Name="labelLight" Text="Light" FontSize="11" />
+                    </Button>
+                    <Button x:Name="buttonDefault" Classes="ghelper" Height="36">
+                        <TextBlock x:Name="labelDefault" Text="Default" FontSize="11" />
+                    </Button>
+                    <Button x:Name="buttonFull" Classes="ghelper" Height="36">
+                        <TextBlock x:Name="labelFull" Text="Full" FontSize="11" />
+                    </Button>
+                    <Button x:Name="buttonComplete" Classes="ghelper" Height="36">
+                        <TextBlock x:Name="labelComplete" Text="Complete" FontSize="11" />
+                    </Button>
+                </UniformGrid>
+
+                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+                    <CheckBox Grid.Row="0" Grid.Column="0" x:Name="checkFps" Content="FPS" IsEnabled="False" />
+                    <CheckBox Grid.Row="0" Grid.Column="1" x:Name="checkTemp" Content="Temperatures" />
+                    <CheckBox Grid.Row="1" Grid.Column="0" x:Name="checkFans" Content="Fan speed" />
+                    <CheckBox Grid.Row="1" Grid.Column="1" x:Name="checkChart" Content="Chart" />
+                    <CheckBox Grid.Row="2" Grid.Column="0" x:Name="checkPower" Content="Power" />
+                    <CheckBox Grid.Row="2" Grid.Column="1" x:Name="checkUsage" Content="Load" />
+                    <CheckBox Grid.Row="3" Grid.Column="0" x:Name="checkRam" Content="RAM" />
+                    <CheckBox Grid.Row="3" Grid.Column="1" x:Name="checkBattery" Content="Battery" IsThreeState="True" />
+                    <CheckBox Grid.Row="4" Grid.Column="0" x:Name="checkLabels" Content="Labels" />
+                </Grid>
+                <TextBlock x:Name="labelFpsHint" Classes="label-dim" TextWrapping="Wrap" Text="" />
+            </StackPanel>
+        </Border>
+
+        <Border Classes="panel">
+            <Grid ColumnDefinitions="110,*,50" RowDefinitions="Auto,Auto,Auto" RowSpacing="6">
+                <TextBlock Grid.Row="0" Grid.Column="0" x:Name="labelSizeTitle" Text="Size" VerticalAlignment="Center" />
+                <Slider Grid.Row="0" Grid.Column="1" x:Name="sliderScale" Minimum="50" Maximum="200" TickFrequency="10" IsSnapToTickEnabled="True" />
+                <TextBlock Grid.Row="0" Grid.Column="2" x:Name="labelScale" Classes="value" Text="100%" VerticalAlignment="Center" />
+
+                <TextBlock Grid.Row="1" Grid.Column="0" x:Name="labelAlphaTitle" Text="Transparency" VerticalAlignment="Center" />
+                <Slider Grid.Row="1" Grid.Column="1" x:Name="sliderAlpha" Minimum="0" Maximum="255" />
+                <TextBlock Grid.Row="1" Grid.Column="2" x:Name="labelAlpha" Classes="value" Text="50%" VerticalAlignment="Center" />
+
+                <TextBlock Grid.Row="2" Grid.Column="0" x:Name="labelPositionTitle" Text="Position" VerticalAlignment="Center" />
+                <ComboBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="comboPosition" HorizontalAlignment="Stretch" />
+            </Grid>
+        </Border>
+
+        <Grid ColumnDefinitions="*,*,*" ColumnSpacing="6">
+            <Button Grid.Column="0" x:Name="buttonCpuColor" Classes="ghelper" Height="36">
+                <StackPanel Orientation="Horizontal" Spacing="6" HorizontalAlignment="Center">
+                    <Border x:Name="swatchCpu" Width="12" Height="12" CornerRadius="2" VerticalAlignment="Center" />
+                    <TextBlock x:Name="labelCpuColor" Text="CPU color" FontSize="11" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="1" x:Name="buttonGpuColor" Classes="ghelper" Height="36">
+                <StackPanel Orientation="Horizontal" Spacing="6" HorizontalAlignment="Center">
+                    <Border x:Name="swatchGpu" Width="12" Height="12" CornerRadius="2" VerticalAlignment="Center" />
+                    <TextBlock x:Name="labelGpuColor" Text="GPU color" FontSize="11" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="2" x:Name="buttonReset" Classes="ghelper" Height="36">
+                <TextBlock x:Name="labelReset" Text="Reset" FontSize="11" />
+            </Button>
+        </Grid>
+
+        <TextBlock x:Name="labelHotkeys" Classes="label-dim" TextWrapping="Wrap" Margin="2,4,2,0" Text="" />
+    </StackPanel>
+</Window>
