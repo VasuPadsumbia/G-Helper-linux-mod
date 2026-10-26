@@ -15,6 +15,12 @@ and a `VERSION` file that records the source URL and commit.
 - **G-Helper** by seerge: https://github.com/seerge/g-helper (GPL-3.0).
   This is the feature reference: GPU offset ranges, mode logic and UI behaviour.
 
+## Frameworks (inherited)
+
+- **Avalonia UI**: https://avaloniaui.net/ / https://github.com/AvaloniaUI/Avalonia (MIT). The UI
+  framework.
+- **.NET**: https://github.com/dotnet/runtime (MIT). Built as a Native AOT single binary.
+
 ## Vendored by upstream (inherited)
 
 - **RyzenAdj** by FlyGoat: https://github.com/FlyGoat/RyzenAdj. A static CLI binary in

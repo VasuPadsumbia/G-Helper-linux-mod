@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/VasuPadsumbia/G-Helper-linux-mod">
-    <img src="https://capsule-render.vercel.app/api?type=venom&height=200&text=G-HELPER%20LINUX%20MOD&fontSize=56&color=0:0d1117,100:00ff41&stroke=00ff41&fontColor=00ff41&animation=twinkling&desc=%3E_%20KERNEL%3A%20LINUX%20%7C%20STATUS%3A%20ONLINE&descAlignY=75&descSize=16&fontFamily=monospace" />
+    <img src="https://capsule-render.vercel.app/api?type=venom&height=200&text=G-HELPER%20LINUX%20MOD&fontSize=56&color=0:0d1117,100:00ff41&stroke=00ff41&fontColor=00ff41&animation=twinkling&desc=%3E_%20BASED%20ON%20G-HELPER%20LINUX%20%7C%20STATUS%3A%20IN%20DEVELOPMENT&descAlignY=75&descSize=16&fontFamily=monospace" />
   </a>
 </p>
 
@@ -10,158 +10,94 @@
 [![Total Binary Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/ghelper?style=for-the-badge&color=28c840&cacheSeconds=3600&label=total%20binary%20downloads)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
 [![Total AppImage Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/GHelper-x86_64.AppImage?style=for-the-badge&color=28c840&cacheSeconds=3600&label=total%20appimage%20downloads)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
 [![License](https://img.shields.io/github/license/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=a0c8ff&cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/blob/master/LICENSE)
-[![Changelog](https://img.shields.io/badge/changelog-what's_new-ff8c42?style=for-the-badge)](CHANGELOG.md)
+[![Upstream](https://img.shields.io/badge/based_on-g--helper--linux-ff8c42?style=for-the-badge)](https://github.com/utajum/g-helper-linux)
 [![Stars](https://img.shields.io/github/stars/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=f0c040&cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/stargazers)
 
 </div>
 
 ```
- ██████╗       ██╗  ██╗███████╗██╗     ██████╗ ███████╗██████╗ 
-██╔════╝       ██║  ██║██╔════╝██║     ██╔══██╗██╔════╝██╔══██╗
-██║  ███╗█████╗███████║█████╗  ██║     ██████╔╝█████╗  ██████╔╝
-██║   ██║╚════╝██╔══██║██╔══╝  ██║     ██╔═══╝ ██╔══╝  ██╔══██╗
-╚██████╔╝      ██║  ██║███████╗███████╗██║     ███████╗██║  ██║
- ╚═════╝       ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝
-                        ██╗     ██╗███╗   ██╗██╗   ██╗██╗  ██╗ 
-                        ██║     ██║████╗  ██║██║   ██║╚██╗██╔╝ 
-                        ██║     ██║██╔██╗ ██║██║   ██║ ╚███╔╝  
-                        ██║     ██║██║╚██╗██║██║   ██║ ██╔██╗  
-                        ███████╗██║██║ ╚████║╚██████╔╝██╔╝ ██╗ 
-                        ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝ 
  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
          ╔══[ SYSTEM ]════════════════════════════════╗
-         ║  >_ KERNEL: LINUX                          ║ 
-         ║  >_ STATUS: ONLINE...                      ║
-         ╚═══════════════════════════════[ 0x1F4 ]════╝
-           ╔══════════════════════════════════════╗
-           ║  ASUS LAPTOP CONTROL FOR LINUX       ║
-            ╚══════════════════════════════════════╝
+         ║  >_ BASE:   G-HELPER LINUX                 ║
+         ║  >_ TARGET: G-HELPER FOR WINDOWS PARITY    ║
+         ║  >_ STATUS: IN DEVELOPMENT...              ║
+         ╚════════════════════════════════════════════╝
 ```
 
+## `░▒▓█ ╔══[ WHAT IS THIS ]══╗ █▓▒░`
 
-## `░▒▓█ ╔══[ MOTIVATION ]══╗ █▓▒░`
+**G-Helper Linux Mod** is a modified version of
+[g-helper-linux](https://github.com/utajum/g-helper-linux) by utajum, the ASUS laptop control app for Linux.
 
-Since `asusctl` doesn't really care about Ubuntu, I decided to port most functionality from the original [G-Helper](https://github.com/seerge/g-helper) for Windows.
+Everything g-helper-linux does is still here, unchanged. This mod adds the parts of
+[G-Helper for Windows](https://github.com/seerge/g-helper) that the Linux port doesn't have yet,
+or doesn't do well. That means GPU tuning that is detected reliably, a hardware overlay, a richer
+tray, an advanced GPU power option and the Windows look. It's developed and tested on an
+**ASUS ROG Flow X13 (2022)** with a Ryzen 6000 CPU and an NVIDIA RTX GPU.
 
-The application is tested on KDE but other desktop environments should also work.
-
-Pull requests and feature requests are welcome!
+> This mod is in early development. The features below are marked **DONE** or **PLANNED**.
+> Planned features aren't in the current release yet.
 
 ---
 
-## `░▒▓█ ╔══[ MOD EDITION ]══╗ █▓▒░`
-
-This repository is a fork of [utajum/g-helper-linux](https://github.com/utajum/g-helper-linux) that
-aims for **full feature parity with [G-Helper for Windows](https://github.com/seerge/g-helper)**,
-including its look. Everything below this section is upstream's documentation and still applies.
+## `░▒▓█ ╔══[ WHAT THE MOD ADDS ]══╗ █▓▒░`
 
 ```
-┌──[ PLANNED ON TOP OF UPSTREAM ]──────────────────────────────────┐
-│  Windows look              G-Helper flat dark UI + mode colors  │
-│  Hardware overlay          Light/Default/Full/Complete, FPS     │
-│  Richer tray               Temps, power, fan, load in tray      │
-│  Driver re-scan            GPU tuning re-detects after driver   │
-│                            install / update / mode change       │
-│  GPU tuning safety         30 s test, auto-revert, crash reset  │
-│  Advanced GPU power        Windows-range Dynamic Boost / TGP    │
-│                            (opt-in, at your own risk)           │
-│  XG Mobile panel           Dock status, eGPU switch             │
-└──────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────┐
+│  [DONE]     First-run fix      Installer writes udev rules and       │
+│                                modules-load.d the way the app        │
+│                                checks them (no "system files need    │
+│                                attention" popup after install)       │
+│  [PLANNED]  GPU driver rescan  GPU tuning re-detects the driver      │
+│                                after install / update / resume /     │
+│                                mode change; shows WHY it's off       │
+│  [PLANNED]  GPU tuning safety  30 s test, auto-revert, crash reset   │
+│  [PLANNED]  GPU undervolt      One-click clock cap + core offset     │
+│  [PLANNED]  Advanced GPU power Windows G-Helper ranges for Dynamic   │
+│                                Boost / TGP — opt-in, own risk        │
+│  [PLANNED]  Hardware overlay   Light / Default / Full / Complete,    │
+│                                FPS via MangoHud, X11 + Wayland       │
+│  [PLANNED]  Richer tray        CPU / GPU / battery watts, load, fan  │
+│  [PLANNED]  CPU temp limit     Plus test-and-revert for undervolt    │
+│  [PLANNED]  Windows look       G-Helper flat dark UI + mode colours  │
+│  [PLANNED]  XG Mobile panel    Dock status, eGPU switch              │
+│  [PLANNED]  Per-app dGPU list  Run chosen apps on the NVIDIA GPU     │
+└──────────────────────────────────────────────────────────────────────┘
 ```
 
-Design documents: **[docs/mod/](docs/mod/)**.
+The design for each feature is in **[docs/mod/](docs/mod/)**.
+
+### `╠══[ ADVANCED GPU POWER — READ THIS ]══╣`
+
+Laptop GPUs are limited by their own firmware and by ASUS's firmware. On the Flow X13, the limit is
+35 W plus 5 W of Dynamic Boost. The planned advanced option sends the same higher values that
+G-Helper for Windows can send. **It is off by default. It is not advised, and you use it at your
+own risk.** The firmware may ignore or clamp those values, so the app will show what the firmware
+actually applied. Flashing a modified GPU VBIOS is not supported and never will be.
 
 ---
 
-## `░▒▓█ ╔══[ FEATURES ]══╗ █▓▒░`
+## `░▒▓█ ╔══[ INHERITED FROM G-HELPER LINUX ]══╗ █▓▒░`
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│  Performance modes         Silent / Balanced / Turbo            │
-│  Custom fan curves         8-point drag-to-edit per fan         │
-│  Battery charge limit      Protect longevity (40-100%)          │
-│  GPU mode switching        Eco / Standard / Optimized (MUX)     │
-│  Power limits              CPU PL1/PL2, Dynamic Boost, temps    │
-│  Screen control            Refresh rate, Panel OD, MiniLED      │
-│  Keyboard backlight        Brightness + RGB (per-key Aura)      │
-│  Display                   Brightness, gamma, multi-backend     │
-│  Undervolting              AMD Curve Optimizer, Intel MSR       │
-│  CPU boost + EPP           Turbo boost, energy preference       │
-│  Audio DSP                 EQ, noise, reverb, vocoder           │
-│  Anime Matrix / Slash      LED matrix display control           │
-│  ROG Ally                  Controller mode, handheld config     │
-│  On-screen keyboard        Toggle with ghelper --osk            │
-│  XG Mobile dock            Dock lights + dock GPU fan curve     │
-│  Steam integration         Add to Steam, gamescope game mode    │
-│  FnLock remapping          Custom Fn key bindings               │
-│  NumberPad                 Trackpad numpad emulation             │
-│  Mouse / peripherals       DPI, polling, Logitech HID++         │
-│  System monitor            CPU/GPU/RAM dashboard + tray stats   │
-│  Self-updater              In-app update check + changelog      │
-│  System tray               Background tray icon + context menu  │
-│  Auto-start                XDG autostart .desktop integration   │
-└──────────────────────────────────────────────────────────────────┘
-```
+These features all come from g-helper-linux:
+- Performance modes and custom fan curves.
+- Battery charge limit.
+- GPU modes (Eco / Standard / Optimized / Ultimate).
+- CPU power limits, NVIDIA Dynamic Boost and NVIDIA clock offsets.
+- AMD Curve Optimizer and Intel undervolting.
+- Refresh rate and panel overdrive.
+- Aura RGB, AniMe Matrix and Slash.
+- Audio DSP.
+- ROG Ally support.
+- XG Mobile dock lights.
+- Steam integration.
+- NumberPad.
+- Peripherals.
+- Self-updater.
 
-Experimental Lenovo support (IdeaPad / Legion / LOQ / Yoga): performance modes, battery conservation, fan monitoring, PPT limits and keyboard backlight via the mainline ideapad-laptop and lenovo-wmi kernel drivers (kernel 6.17+ for power limits).
-
----
-
-## `░▒▓█ ╔══[ GPU MODE SWITCHING ]══╗ █▓▒░`
-
-G-Helper manages the ASUS dGPU (discrete GPU) power state and MUX switch through four modes:
-
-```
-╔══[ MODES ]═════════════════════════════════════════════════════╗
-║                                                                 ║
-║  Eco         dGPU powered off (dgpu_disable=1)                 ║
-║              Maximum battery life, iGPU only                    ║
-║                                                                 ║
-║  Standard    Hybrid mode (dgpu_disable=0, MUX=iGPU)            ║
-║              dGPU available for offloading, iGPU drives display ║
-║                                                                 ║
-║  Optimized   Auto-switch based on power source                  ║
-║              Eco on battery, Standard on AC power               ║
-║                                                                 ║
-║  Ultimate    dGPU direct (dgpu_disable=0, MUX=dGPU)            ║
-║              Best performance — dGPU drives display directly    ║
-║                                                                 ║
-╚═════════════════════════════════════════════════════════════════╝
-```
-
-### `╠══[ REBOOT REQUIREMENTS ]══╣`
-
-| Transition | Reboot? | Why |
-|------------|---------|-----|
-| Eco ↔ Standard | Usually no | May need reboot if GPU driver is active |
-| Any → Ultimate | **Yes** | MUX switch is latched, takes effect on reboot |
-| Ultimate → Any | **Yes** | MUX switch back to iGPU requires reboot |
-
-When a reboot is required, G-Helper shows a notification and the pending mode appears in the UI. You can change your mind before rebooting — clicking a different mode cancels the pending change.
-
-### `╠══[ DRIVER BLOCKING DIALOG ]══╣`
-
-Switching to Eco while the dGPU driver is active shows a dialog with three options:
-
-- **Switch Now** — closes the apps using the dGPU and unloads its driver (unsaved work in them is lost)
-- **After Reboot** — saves the mode for next boot (dGPU driver is blocked from loading via modprobe rules)
-- **Cancel** — keeps the current mode
-
-### `╠══[ KNOWN LIMITATIONS ]══╣`
-
-- **Ultimate → Eco** may require 2 reboots (MUX must change first, then Eco can apply)
-- **MUX switch support** varies by model — requires `gpu_mux_mode` sysfs attribute
-- **Eco mode** may require a reboot if the dGPU driver holds a DRM file descriptor
-- On boot, a systemd oneshot service applies pending GPU mode changes before the display manager starts
-
-### `╠══[ RAW WMI MODE (EXPERIMENTAL) ]══╣`
-
-For 2020-2021 laptops without `dgpu_disable` sysfs, G-Helper supports raw ACPI/WMI calls
-via the kernel's debugfs interface. See **[docs/raw-wmi.md](docs/raw-wmi.md)** for details.
-
-### `╠══[ UNDERVOLTING (AMD RYZEN) ]══╣`
-
-Curve Optimizer undervolting for AMD Ryzen CPUs via the [ryzen_smu](https://github.com/amkillam/ryzen_smu) kernel driver. Requires the driver to be installed separately. The feature is hidden unless the driver is loaded and the CPU is supported. See **[docs/amd-undervolting.md](docs/amd-undervolting.md)** for setup, supported CPUs, and details.
+For how each of these works, the GPU mode reboot rules, the kernel feature matrix and the
+project structure, see the
+**[g-helper-linux README](https://github.com/utajum/g-helper-linux#readme)**. Those parts work the same here.
 
 ---
 
@@ -170,62 +106,33 @@ Curve Optimizer undervolting for AMD Ryzen CPUs via the [ryzen_smu](https://gith
 ```
 ╔══[ TERMS OF USE ]══════════════════════════════════════════════╗
 ║                                                                 ║
-║  G-Helper Linux interacts directly with ASUS firmware via       ║
-║  kernel sysfs attributes and ACPI/WMI methods. These are the   ║
-║  same interfaces used by ASUS Armoury Crate on Windows.         ║
+║  This software writes to ASUS firmware through kernel sysfs     ║
+║  attributes and ACPI/WMI methods — the same interfaces ASUS     ║
+║  Armoury Crate uses on Windows. It changes GPU power state,     ║
+║  fan speeds, power limits, clocks and voltages.                 ║
 ║                                                                 ║
-║  BY USING THIS SOFTWARE, YOU ACKNOWLEDGE:                       ║
+║  Incorrect or interrupted writes can leave hardware in an       ║
+║  unexpected state; in rare cases a CMOS reset may be needed.    ║
+║  Overclocking, undervolting and raising power limits can make   ║
+║  the system unstable or shorten hardware life.                  ║
 ║                                                                 ║
-║  1. This software writes to hardware control registers that     ║
-║     affect GPU power state, fan speeds, power limits, and       ║
-║     MUX switch configuration.                                   ║
-║                                                                 ║
-║  2. Incorrect or interrupted writes (e.g., power loss during    ║
-║     a MUX switch) could leave hardware in an unexpected state.  ║
-║     In rare cases, a CMOS reset may be needed to recover.       ║
-║                                                                 ║
-║  3. Experimental features (marked as such) bypass normal        ║
-║     kernel safety checks and should only be enabled if you      ║
-║     understand the risks.                                       ║
-║                                                                 ║
-║  4. This software is provided AS-IS with no warranty.           ║
-║     The authors are not responsible for hardware damage.        ║
+║  Provided AS-IS with no warranty. The authors are not           ║
+║  responsible for hardware damage.                               ║
 ║                                                                 ║
 ╚═════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## `░▒▓█ ╔══[ SYSTEM REQUIREMENTS ]══╗ █▓▒░`
+## `░▒▓█ ╔══[ REQUIREMENTS ]══╗ █▓▒░`
 
-```
-╔══[ MINIMUM SPEC ]══════════════════════════════════════════════╗
-║                                                                 ║
-║  OS       Ubuntu 24.04+ / Debian 13+ / Fedora 39+ / Arch      ║
-║  libc     glibc 2.38+ (release binary and AppImage)            ║
-║  Desktop  X11 or Wayland (X11 recommended for full xrandr)     ║
-║  Kernel   6.2+ recommended, 6.9+ for all features              ║
-║  Module   asus-nb-wmi (loaded by default on ASUS laptops)      ║
-║                                                                 ║
-╚═════════════════════════════════════════════════════════════════╝
-```
+Same as g-helper-linux:
+- Any modern distro with **glibc 2.38+**, such as Ubuntu 24.04+, Debian 13+, Fedora 39+ or Arch.
+- X11 or Wayland.
+- Kernel 6.2+ recommended, 6.9+ for all features.
+- The `asus-nb-wmi` module, which ASUS laptops load by default.
 
-```bash
-# verify kernel module
-lsmod | grep asus
-# expected: asus_nb_wmi, asus_wmi
-```
-
-### `╠══[ KERNEL FEATURE MATRIX ]══╣`
-
-| Feature | Min Kernel |
-|---------|-----------|
-| Performance modes, fan speed, battery limit | 5.17 |
-| Custom fan curves (8-point) | 5.17 |
-| PPT power limits (PL1, PL2, FPPT) | 6.2 |
-| GPU MUX switch | 6.1 |
-| NVIDIA Dynamic Boost / Temp Target | 6.2 |
-| MiniLED mode control | 6.9 |
+The mod doesn't need Docker, distro packages or a custom kernel.
 
 ---
 
@@ -237,9 +144,14 @@ lsmod | grep asus
 curl -sL https://raw.githubusercontent.com/VasuPadsumbia/G-Helper-linux-mod/master/install/install.sh | sudo bash
 ```
 
-On NixOS the same command stages a module in `/etc/nixos` and runs `nixos-rebuild switch`.
+This installs the app to `/opt/ghelper`, along with the hardware access rules, the GPU helper and
+a menu entry. Reboot once afterwards so the hardware permissions take full effect.
 
-The binary and the AppImage also check their system files on every start and offer to install or repair them with one password prompt (state in the Updates window).
+### `╠══[ SWITCHING FROM G-HELPER LINUX OR ASUSCTL ]══╣`
+
+Keep only one of these apps installed. This mod installs to the same places as g-helper-linux,
+so uninstall g-helper-linux first. **asusctl / asusd** controls the same hardware, and the two will
+overwrite each other's settings, so stop or uninstall it as well.
 
 ### `╠══[ UNINSTALL ]══╣`
 
@@ -247,15 +159,7 @@ The binary and the AppImage also check their system files on every start and off
 curl -sL https://raw.githubusercontent.com/VasuPadsumbia/G-Helper-linux-mod/master/install/install.sh | sudo bash -s -- --uninstall
 ```
 
-Removes system files + udev rules + desktop entry. User config in `~/.config/ghelper` is preserved.
-
-### `╠══[ MANUAL DOWNLOAD ]══╣`
-
-```bash
-curl -sL https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest/download/ghelper -o ghelper
-chmod +x ghelper
-./ghelper
-```
+Your settings in `~/.config/ghelper` are kept.
 
 ### `╠══[ APPIMAGE ]══╣`
 
@@ -271,314 +175,43 @@ chmod +x GHelper-x86_64.AppImage
 # Ubuntu/Debian
 sudo apt install dotnet-sdk-10.0 clang zlib1g-dev libpipewire-0.3-dev libwayland-dev pkg-config
 
-# Fedora
-sudo dnf install dotnet-sdk-10.0 clang zlib-devel pipewire-devel wayland-devel pkg-config
-
-# Arch
-sudo pacman -S dotnet-sdk clang libpipewire wayland pkg-config
+./build.sh                      # Native AOT build → dist/ghelper
+sudo ./install/install-local.sh # install the local build
 ```
 
-```bash
-# Check for outdated NuGet packages
-cd src && dotnet list package --outdated
-```
-
-```bash
-./build.sh
-sudo ./install/install-local.sh
-```
-
-```bash
-# Before opening a PR (CI runs these too)
-dotnet run -c Debug --project tests/GHelper.Linux.Tests
-bash install/tests/test-ghelper-gpu-boot.sh
-./scripts/i18n-check.sh
-```
-
-<details>
-<summary><code>╠══[ MANUAL BUILD COMMANDS ]══╣</code></summary>
-
-```bash
-# Development (no AOT, fast incremental rebuilds)
-./build.sh --fast && ./dist/ghelper
-
-# GHELPER_DEV=1 shows a "Dev Windows" button in the main window to open any app window without the matching hardware
-GHELPER_DEV=1 ./dist/ghelper
-
-# Production (Native AOT)
-./build.sh
-# -> dist/ghelper
-```
-
-</details>
+For Fedora and Arch packages and the developer build options, see the
+[g-helper-linux build guide](https://github.com/utajum/g-helper-linux#readme).
 
 ---
 
-## `░▒▓█ ╔══[ INSTALL TARGETS ]══╗ █▓▒░`
+## `░▒▓█ ╔══[ STAYING IN SYNC ]══╗ █▓▒░`
 
-```
-╔══[ DEPLOYED FILES ]════════════════════════════════════════════╗
-║                                                                 ║
-║  0xF0  Binary     /opt/ghelper/ghelper                         ║
-║  0xF1  Symlink    /usr/local/bin/ghelper                       ║
-║  0xF2  Helpers    /opt/ghelper/gpu-helper, ryzenadj (AMD)      ║
-║  0xF3  Scripts    /usr/local/lib/ghelper/*.sh                  ║
-║  0xF4  Service    /etc/systemd/system/ghelper-gpu-boot.service ║
-║  0xF5  sudoers    /etc/sudoers.d/zz-ghelper-gpu                ║
-║  0xF6  udev       /etc/udev/rules.d/90-ghelper.rules           ║
-║  0xF7  Modules    /etc/modules-load.d/ghelper.conf             ║
-║  0xF8  Desktop    /usr/share/applications/ghelper.desktop      ║
-║  0xF9  Autostart  ~/.config/autostart/ghelper.desktop          ║
-║  0xFA  Icon       /usr/share/icons/hicolor/.../ghelper.png     ║
-║                                                                 ║
-╚═════════════════════════════════════════════════════════════════╝
-```
-
-`install.sh` downloads the release binary. `install-local.sh` uses the local build from `dist/`.
-
-```bash
-# reload udev after install (or reboot)
-sudo udevadm control --reload-rules && sudo udevadm trigger
-```
-
-<details>
-<summary><code>╠══[ MANUAL SETUP ]══╣</code></summary>
-
-```bash
-# udev rules
-sudo cp install/90-ghelper.rules /etc/udev/rules.d/
-sudo udevadm control --reload-rules && sudo udevadm trigger
-
-# Desktop entry + autostart
-sudo cp install/ghelper.desktop /usr/share/applications/
-mkdir -p ~/.config/autostart
-cp install/ghelper.desktop ~/.config/autostart/
-```
-
-</details>
-
----
-
-## `░▒▓█ ╔══[ CONFIGURATION ]══╗ █▓▒░`
-
-```
-~/.config/ghelper/config.json
-```
-
-Same JSON key format as Windows G-Helper — fan curves and mode settings are compatible.
-
----
-
-## `░▒▓█ ╔══[ PROJECT STRUCTURE ]══╗ █▓▒░`
-
-```
-g-helper-linux/
-  build.sh                                # Build script (Native AOT)
-  install/
-    install.sh                            # Download + install (end users)
-    install-local.sh                      # Install from local build (devs)
-    90-ghelper.rules                      # udev rules
-    ghelper.desktop                       # Desktop entry
-    gpu-block-helper.sh                   # dGPU block for Eco (modprobe/udev)
-    ghelper-gpu-boot.sh / .service        # Pending GPU mode at boot
-  nixos/                                  # Flake, package and NixOS module
-  vendor/
-    gpu-helper/                           # Native C helper (setuid root)
-      gpu-helper.c                        #   Main entry + CLI dispatch
-      nvidia_ops.c                        #   NVML process scan, refcnt, MPS
-      pci_ops.c                           #   PCI power control, DRM unbind
-      wmi_ops.c                           #   ACPI/WMI raw calls
-      ec_ops.c                            #   ASUS EC manual fan duty
-      msr_ops.c                           #   Intel MSR undervolting
-      process_ops.c                       #   Process kill for GPU holders
-      lenovo_ops.c                        #   Lenovo WMI fan/thermal
-    ryzenadj/                             # AMD SMU power tuning (bundled)
-    wlr-randr/                            # Wayland display backend (bundled)
-  audio-helper/                           # Native C PipeWire DSP helper
-    main.c                                #   Real-time audio frame I/O
-    protocol.h                            #   Shared frame protocol with C#
-    rnnoise/                              #   RNNoise noise suppression lib
-  scripts/
-    i18n-check.sh                         # Translation key validation
-    kernel-check.sh                       # Upstream kernel feature tracking
-    upstream-check.sh                     # Windows G-Helper upstream diff
-  tests/
-    GHelper.Linux.Tests/                  # C# scenario tests
-  docs/
-    raw-wmi.md                            # Raw ACPI/WMI mode (2020-2021)
-    amd-undervolting.md                   # AMD Curve Optimizer setup
-  src/
-    Program.cs                            # Entry point
-    App.axaml / App.axaml.cs              # Avalonia app + tray icon + lifecycle
-    GHelper.Linux.csproj                  # Project file (.NET 10.0, AOT)
-    Cli/
-      ResourceExtractorCli.cs             # --extract-helper, --apply-system-files
-    Helpers/
-      AppConfig.cs                        # Configuration (JSON, AOT-safe)
-      Logger.cs                           # Console logger
-      AudioHelper.cs                      # PipeWire DSP bridge (audio-helper)
-      AudioFrame.cs                       # Native frame protocol structs
-      CommandIpc.cs                       # Single-instance IPC
-      Diagnostics.cs                      # System info dump
-      NativeLibExtractor.cs               # Embedded binary extraction
-      SystemTelemetry.cs                  # CPU/RAM/temp monitoring
-      TraySystemMonitor.cs                # Tray tooltip telemetry
-    Mode/
-      Modes.cs                            # Performance mode definitions
-      ModeControl.cs                      # Mode change orchestrator
-    Battery/
-      BatteryControl.cs                   # Charge limit + battery info
-    Fan/
-      FanSensorControl.cs                 # Multi-sensor fan curve logic
-      FanHysteresis.cs                    # Hysteresis smoothing
-    Gpu/
-      GPUModeControl.cs                   # Eco/Standard/Ultimate orchestrator
-      NVidia/
-        LinuxNvidiaGpuControl.cs          #   NVML + nvidia-smi monitoring
-        NvidiaProcessScanner.cs           #   dGPU holder scan (proc/NVML/MPS)
-        GpuQueryGate.cs                   #   Circuit breaker for wedged dGPU
-      AMD/
-        LinuxAmdGpuControl.cs             #   amdgpu hwmon sysfs
-        LinuxAmdDgpuDetect.cs             #   AMD dGPU presence detection
-        LinuxAmdGpuMetrics.cs             #   GPU metrics table parsing
-    Display/
-      LinuxDisplayControl.cs              # Brightness, gamma, refresh rate
-      DisplayBackendFactory.cs            # Auto-detect display backend
-      XrandrBackend.cs                    # X11 xrandr
-      WlrRandrBackend.cs                  # wlroots Wayland
-      KScreenBackend.cs                   # KDE Wayland
-      GdctlBackend.cs                     # GNOME display control
-      MiniLed.cs                          # MiniLED zone control
-      OptimalBrightness.cs                # Ambient-adaptive brightness
-    Input/
-      InputDispatcher.cs                  # Hotkey routing + FnF5 debounce
-      EvdevInterop.cs                     # Raw evdev P/Invoke
-      FnLockRemapper.cs                   # Fn-lock key remapping
-      GamepadNav.cs                       # Gamepad UI navigation
-      MKeyControl.cs                      # M-key macro support
-      NumberPad.cs                        # Trackpad numpad emulation
-      OskUinput.cs                        # On-screen keyboard uinput
-    I18n/
-      Labels.cs                           # Translation key registry
-      Languages/                          # 38 language files
-    Install/
-      Installer.cs                        # Self-install / system file sync
-    Ally/
-      AllyControl.cs                      # ROG Ally handheld controller
-      ControllerMode.cs                   # Gamepad / desktop mode toggle
-    AnimeMatrix/
-      AniMatrixControl.cs                 # Anime Matrix LED display
-      AnimeMatrixDevice.cs                # HID protocol
-      SlashDevice.cs                      # Slash LED display
-    Peripherals/
-      PeripheralsProvider.cs              # Device discovery
-      Mouse/                              # Mouse DPI / polling config
-      Logitech/                           # Logitech HID++ protocol
-    USB/
-      AsusHid.cs                          # ASUS HID protocol
-      Aura.cs                             # Aura RGB lighting
-      CustomRgb.cs                        # Per-key RGB
-      LenovoRgb.cs                        # Lenovo keyboard RGB
-      XGM.cs                              # XG Mobile dock lights + fan
-    Platform/
-      IHardwareControl.cs                 # Hardware abstraction interfaces
-      Linux/
-        SysfsHelper.cs                    # Core sysfs read/write utility
-        LinuxPowerManager.cs              # CPU boost, platform profile, EPP
-        LinuxAudioControl.cs              # PulseAudio/PipeWire volume
-        LinuxInputHandler.cs              # evdev event forwarding
-        LinuxSystemIntegration.cs         # DMI sysfs, XDG autostart
-        Asus/
-          LinuxAsusWmi.cs                 #   asus-wmi sysfs + ACPI events
-          AsusAttributes.cs               #   Firmware attribute discovery
-          StatusLed.cs                    #   Status LED control
-        Lenovo/
-          LinuxLenovoWmi.cs               #   Lenovo WMI platform driver
-          LenovoAttributes.cs             #   Lenovo sysfs attributes
-          LenovoDetection.cs              #   Model detection + quirks
-        RyzenSmu.cs                       # AMD Curve Optimizer (ryzen_smu)
-        IntelUndervolt.cs                 # Intel MSR undervolting
-        CpuEpp.cs                         # Energy Performance Preference
-        Cosmic.cs                         # COSMIC DE integration
-        NixOS.cs                          # NixOS-specific paths
-        ImmutableOs.cs                    # Fedora Atomic / SteamOS quirks
-        SteamShortcuts.cs                 # Steam library shortcut, game mode
-    UI/
-      Styles/
-        GHelperTheme.axaml                # Dark theme
-      Controls/
-        FanCurveChart.cs                  # Interactive fan curve chart
-        EqResponseView.cs                 # EQ frequency response
-        KnobControl.cs                    # Audio knob widget
-        WaveformView.cs                   # Audio waveform display
-        SpectrumView.cs                   # Audio spectrum analyzer
-      Dialogs/
-        ConfirmDialog.axaml               # Reusable confirm dialog
-      Views/
-        MainWindow.axaml / .cs            # Main settings window
-        FansWindow.axaml / .cs            # Fan curves + power limits
-        ExtraWindow.axaml / .cs           # Display, power, system info
-        AudioWindow.axaml / .cs           # Audio device routing
-        EqWindow.axaml / .cs              # Parametric equalizer
-        NoiseWindow.axaml / .cs           # RNNoise suppression
-        ReverbWindow.axaml / .cs          # Reverb effect
-        VocoderWindow.axaml / .cs         # Vocoder effect
-        MonitorWindow.axaml / .cs         # System monitor dashboard
-        HandheldWindow.axaml / .cs        # ROG Ally / handheld config
-        MatrixWindow.axaml / .cs          # Anime Matrix editor
-        FnLockWindow.axaml / .cs          # FnLock key config
-        MouseWindow.axaml / .cs           # Mouse/peripheral settings
-        NvidiaProcessesWindow.axaml / .cs # dGPU process viewer
-        OnScreenKeyboardWindow.axaml / .cs # On-screen keyboard
-        UpdatesWindow.axaml / .cs         # Self-updater
-        SystemInfoWindow.axaml / .cs      # System info viewer
-      Assets/
-        Icons/                            # SVG icon library
-        *.ico                             # Tray + window icons
-```
-
----
-
-## `░▒▓█ ╔══[ ARCHITECTURE ]══╗ █▓▒░`
-
-| Windows (G-Helper) | Linux (this port) |
-|---|---|
-| `\\.\ATKACPI` DeviceIoControl | `/sys/devices/platform/asus-nb-wmi/` sysfs |
-| DSTS (read) / DEVS (write) | `cat` / `echo >` sysfs attributes |
-| WMI `Win32_*` queries | `/sys/class/dmi/id/` sysfs |
-| `user32.dll` EnumDisplaySettings | xrandr / wlr-randr / kscreen / gdctl (auto-detect) |
-| NvAPIWrapper.Net | gpu-helper (NVML) + nvidia-smi fallback |
-| `atiadlxx.dll` (AMD ADL) | amdgpu hwmon sysfs + gpu-helper PCI ops |
-| NAudio / CoreAudio | audio-helper (PipeWire native C, real-time DSP) |
-| Task Scheduler autostart | XDG `~/.config/autostart/*.desktop` |
-| WinForms UI | Avalonia UI (cross-platform) |
+This repository is a git fork that keeps g-helper-linux's full history. Upstream fixes are merged
+in regularly, and the mod's own changes are kept in separate files wherever possible. Fixes that
+help everyone are offered back to g-helper-linux.
 
 ---
 
 ## `░▒▓█ ╔══[ CREDITS ]══╗ █▓▒░`
 
-- [g-helper-linux](https://github.com/utajum/g-helper-linux) by utajum, the project this fork is based on ([support the author](https://buymeacoffee.com/utajum))
-- [G-Helper](https://github.com/seerge/g-helper) by seerge
-- [Avalonia UI](https://avaloniaui.net/)
-- [asus-wmi kernel driver](https://github.com/torvalds/linux/tree/master/drivers/platform/x86)
-- [ryzen_smu](https://github.com/amkillam/ryzen_smu) by Leonardo Gates / amkillam
-- [RyzenAdj](https://github.com/FlyGoat/RyzenAdj) by FlyGoat (bundled CLI binary for AMD SMU power tuning)
-- [RNNoise](https://github.com/xiph/rnnoise) by Jean-Marc Valin / Xiph.Org (noise suppression)
-- [PipeWire](https://pipewire.org/) (native audio DSP pipeline)
+- [g-helper-linux](https://github.com/utajum/g-helper-linux) by utajum: the project this mod is
+  built on ([support the author](https://buymeacoffee.com/utajum)).
+- [G-Helper](https://github.com/seerge/g-helper) by seerge: the original Windows app and the
+  feature reference.
+- Every other project the mod uses is linked in
+  **[docs/mod/third-party.md](docs/mod/third-party.md)**, including RyzenAdj, ryzen_smu, MangoHud
+  and Avalonia.
 
 ---
 
 ## `░▒▓█ ╔══[ LICENSE ]══╗ █▓▒░`
 
-Same license as the original G-Helper project.
-
----
+GPL-3.0, the same as g-helper-linux and G-Helper.
 
 <div align="center">
 
 ```
   ░▒▓█ END OF TRANSMISSION █▓▒░
-  > SESSION_END :: 0x00000000
 ```
 
 </div>

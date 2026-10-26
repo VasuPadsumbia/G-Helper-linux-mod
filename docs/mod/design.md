@@ -7,8 +7,10 @@ https://github.com/utajum/g-helper-linux with its full history. The `upstream` r
 upstream's `master` branch. Our branch is also `master`, because upstream hard-codes that name
 in its installer, updater and release workflow.
 
-- We use upstream's README, installer, build, release and project description. The README gains
-  one "MOD EDITION" section, and the install and update URLs point at this fork.
+- We use upstream's installer, build and release pipeline, pointed at this fork. The README keeps
+  upstream's visual style, but describes **the mod**: what it adds (marked DONE or PLANNED),
+  installation, and credits. It links to upstream's README for inherited features instead of
+  copying it.
 - We use upstream's code: C# / .NET 10, Avalonia, a Native AOT single binary plus AppImage, the
   `vendor/gpu-helper` root helper, and the udev rules and sudoers drop-in. Upstream is merged
   regularly with `git fetch upstream && git merge upstream/master`.
