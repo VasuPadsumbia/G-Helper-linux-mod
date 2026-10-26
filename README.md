@@ -131,23 +131,177 @@ As in G-Helper for Windows, you'll be able to **add**, **rename** and **remove**
 
 ## :zap: Features
 
-1. Performance modes: Silent - Balanced - Turbo, plus custom modes, each with its own fan curves and power limits
-2. GPU modes: Eco - Standard - Optimized - Ultimate (MUX, on supported models)
-3. Custom fan curve editor: 8 points per fan, per mode
-4. CPU power limits (sustained / slow / fast PPT), CPU boost and energy preference
-5. NVIDIA GPU tuning: core and memory clock offsets, clock lock, Dynamic Boost and temperature target
-6. AMD CPU undervolting (Curve Optimizer) and Intel undervolting
-7. Battery charge limit to preserve battery health
-8. Screen refresh rate and panel overdrive, Mini-LED modes, brightness and gamma
-9. Keyboard RGB (Aura) modes and colours, Anime Matrix and Slash lighting
-10. XG Mobile dock lights and dock fan curve
-11. CPU, GPU, fan and battery monitoring in the tray and a system monitor
-12. BIOS and driver update checker for your model, using Asus's official site
-13. Asus and Logitech mice, keyboards and other peripherals
-14. ROG Ally controller modes, NumberPad, FnLock and custom hotkeys
-15. Audio tools: equaliser, noise suppression, reverb
-16. Steam integration and game mode
-17. Self-updater and autostart
+Everything below works today unless it's marked 🗓️ (planned). 🆕 marks what this mod adds on top of g-helper-linux. Click a group to expand it.
+
+<details open>
+<summary><b>🚀 Performance modes and power</b></summary>
+
+- Silent, Balanced and Turbo, the modes built into your BIOS, plus custom modes
+- Automatic mode switching when you plug in or go on battery
+- CPU power limits: sustained (SPL / PL1), slow boost (SPPT / PL2) and fast boost (FPPT)
+- 🆕 CPU power limits below the firmware minimum on AMD, down to 6 W, through ryzenadj
+- 🆕 The custom power limit shown in the mode title, for example "Mode: Turbo 15W"
+- CPU boost on / off and energy performance preference (EPP)
+- Linux platform profile kept in sync with the mode
+- Per-mode "auto apply" for power limits, fan curves and GPU settings
+- Per-mode shell command hook, run on every mode switch
+- 🗓️ Custom modes with Add, Rename and Remove buttons, as on Windows
+
+</details>
+
+<details>
+<summary><b>🌀 Fans</b></summary>
+
+- Custom fan curve editor: 8 points per fan, per mode, with drag-to-edit
+- CPU, GPU and mid fan support where the laptop has them
+- Experimental manual fan control (EC table) on supported models
+- Fan speed hysteresis to avoid fans hunting up and down
+- 🆕 Fan speed in RPM by default; click the reading to switch to percent
+
+</details>
+
+<details>
+<summary><b>🎮 GPU</b></summary>
+
+- GPU modes: Eco, Standard, Optimized (Eco on battery, Standard on AC) and Ultimate (MUX)
+- Safe Eco switching: closes apps using the dGPU, or schedules the change for the next boot
+- NVIDIA tuning: core and memory clock offsets, core clock lock, VRAM clock lock and power limit
+- NVIDIA Dynamic Boost, temperature target, sustained TGP and max TGP (from the Asus firmware)
+- Live GPU status: clocks, P-state, power, temperature, usage, VRAM, throttle reasons and PCIe link
+- A list of the apps using the dGPU, which you can close
+- AMD Radeon dGPU monitoring
+- 🆕 NVIDIA GPU detected even while it sleeps (upstream missed it and showed "No NVIDIA GPU detected")
+- 🗓️ Automatic driver rescan and a Rescan button
+- 🗓️ 30-second test and automatic revert for overclocks
+- 🗓️ One-click GPU undervolt (clock cap plus core offset)
+- 🗓️ Advanced GPU power with G-Helper for Windows' ranges (opt-in, at your own risk)
+
+</details>
+
+<details>
+<summary><b>🧠 CPU tuning and undervolting</b></summary>
+
+- AMD Curve Optimizer undervolting for the CPU and iGPU, through ryzen_smu (optional module)
+- Intel undervolting through MSR
+- AMD temperature, current and power tuning through the bundled ryzenadj
+- CPU temperature target
+- 🗓️ 30-second test and automatic revert for undervolts
+
+</details>
+
+<details>
+<summary><b>🔋 Battery and power management</b></summary>
+
+- Battery charge limit (40–100 %) with one-click 60 / 80 / 100 % presets
+- Battery information: health, cycle count, design capacity, charge and discharge rate
+- Suspend mode choice (s2idle or deep sleep)
+- Clamshell mode (don't sleep when the lid is closed)
+- dGPU power daemon and USB power options on supported models
+- Automatic PCIe power saving (ASPM) in Silent mode
+
+</details>
+
+<details>
+<summary><b>🖥️ Display</b></summary>
+
+- Refresh rate: Auto (60 Hz on battery, maximum on AC), 60 Hz or maximum
+- 🆕 Refresh rate switching on GNOME 40–47 Wayland, through GNOME's own display API
+- 🆕 Auto always turns on, like Windows, and hovering over the buttons explains them
+- Panel overdrive
+- Mini-LED modes on supported panels
+- Optimal display brightness (Asus firmware)
+- Display brightness and gamma
+- Works with X11, KDE, GNOME and wlroots compositors
+
+</details>
+
+<details>
+<summary><b>⌨️ Keyboard and lighting</b></summary>
+
+- Aura RGB modes, colours, speed and brightness, including per-key RGB keyboards
+- Lighting power zones for the keyboard, logo, lightbar, lid and rear light: awake, boot, sleep, shutdown and battery
+- Keyboard backlight brightness, with separate levels on AC and battery
+- Keep the keyboard backlight always on
+- Status LED control
+
+</details>
+
+<details>
+<summary><b>✨ AniMe Matrix and Slash</b></summary>
+
+- AniMe Matrix: built-in animations, pictures, animated GIFs and clock
+- 🗓️ Audio visualiser on the AniMe Matrix and Slash
+- Slash lighting: animations, speed, brightness, and boot / sleep / shutdown / battery / lid behaviour
+
+</details>
+
+<details>
+<summary><b>📊 Monitoring, overlay and tray</b></summary>
+
+- Live CPU and GPU temperature, load and fan speed in the main window
+- System monitor window with temperature, fan and power charts
+- 🆕 CPU package power in the monitor (AMD APUs, no root needed)
+- 🆕 Metrics overlay with Light, Default, Full and Complete presets: temperatures, fan speed, power chart, power, load, RAM and battery. Size, transparency, colours, screen corner and "only in games" are adjustable, and it's always on top and click-through
+- 🗓️ In-game FPS in the overlay, through MangoHud
+- Tray icon with the current mode, optional CPU and GPU temperature icons, and a dGPU status icon
+- 🗓️ Tray icons for CPU, GPU and battery watts
+- System information window: CPU, memory, graphics, storage, network, audio, battery and USB devices
+
+</details>
+
+<details>
+<summary><b>🎹 Input and hotkeys</b></summary>
+
+- ROG / M5 key, Fn+F4 and Fn+F5 / M4 bindings, each assignable to an action
+- Function key remap (FN-Lock): F1–F12 as media keys, with a per-key map and a toggle hotkey
+- NumberPad: the touchpad's built-in number pad
+- On-screen keyboard (`ghelper --osk`)
+- Camera, touchpad and touchscreen toggles
+- 🆕 `ghelper --overlay` to toggle the overlay from a desktop shortcut
+
+</details>
+
+<details>
+<summary><b>🎧 Audio</b></summary>
+
+- Microphone mute toggle
+- Audio effects through PipeWire: equaliser, RNNoise noise suppression, reverb, delay and vocoder
+- Boot sound on / off
+
+</details>
+
+<details>
+<summary><b>🔌 XG Mobile and handhelds</b></summary>
+
+- XG Mobile dock: eGPU switching, dock lights and dock fan curve
+- ROG Ally: controller modes, button mapping, stick calibration, APU memory and handheld settings
+- Steam integration: add G-Helper to Steam, gamescope game mode
+- 🗓️ XG Mobile panel with attach and lock status
+
+</details>
+
+<details>
+<summary><b>🖱️ Peripherals</b></summary>
+
+- Asus mice: DPI, polling rate, lighting and buttons on many ROG and TUF models
+- Logitech mice, keyboards and headsets through HID++
+
+</details>
+
+<details>
+<summary><b>⚙️ System, updates and integration</b></summary>
+
+- BIOS and driver update checker for your exact model, using Asus's official site
+- Self-updater with changelog
+- One-click repair of the app's system files
+- Start on login, start minimised, window always on top, temperatures in Fahrenheit, 22 icon sets and 38 languages
+- Raw WMI mode for 2020–2021 laptops (experimental)
+- NixOS module, and immutable / SteamOS support
+- Experimental Lenovo support: IdeaPad, Legion, LOQ and Yoga
+- 🆕 The Windows G-Helper look: mode colours, flat dark sections and white icons
+- 🆕 Installer that doesn't trigger the "System files need attention" popup
+
+</details>
 
 ### :gear: Automation
 - Switches the performance mode when you go on battery or plug in.
