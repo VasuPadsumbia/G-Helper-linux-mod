@@ -54,12 +54,16 @@ It's developed and tested on the **ROG Flow X13 (2022)**, with a Ryzen 9 6900HS 
 | | Feature | Status |
 |:-:|---|:-:|
 | 🧰 | First-run fix: no "System files need attention" popup after install | ✅ Done |
+| 🔋 | CPU power limits below the firmware minimum on AMD (down to 6 W) | ✅ Done |
+| 🏷️ | Custom power shown in the mode title ("Mode: Turbo 15W"), fan speed in RPM | ✅ Done |
+| 🖥️ | Refresh rate switching on GNOME 40–47 Wayland, and Auto that stays on | ✅ Done |
+| 📈 | CPU power in the Monitor window | ✅ Done |
 | 🔍 | GPU detection that works while the GPU sleeps, plus automatic rescan | 🚧 In progress |
 | 🎨 | The Windows G-Helper look | 🚧 In progress |
 | 🛡️ | 30-second test and automatic revert for GPU tuning | 🗓️ Planned |
 | 📉 | One-click GPU undervolt | 🗓️ Planned |
 | ⚡ | Advanced GPU power (opt-in, at your own risk) | 🗓️ Planned |
-| 📊 | In-game metrics overlay | 🗓️ Planned |
+| 📊 | Metrics overlay (in-game FPS still to come) | 🚧 In progress |
 | 🔋 | Richer tray: CPU / GPU / battery watts | 🗓️ Planned |
 | 🌡️ | CPU temperature limit and safe undervolting | 🗓️ Planned |
 | 🧩 | Custom performance modes: add, rename, remove | 🗓️ Planned |
@@ -73,7 +77,7 @@ It's developed and tested on the **ROG Flow X13 (2022)**, with a Ryzen 9 6900HS 
 | NVIDIA clock offsets | ✅ | ✅ (can miss a sleeping GPU) | ✅ (detects it reliably) 🚧 |
 | Safe test-and-revert for overclocks and undervolts | ❌ | ❌ | 🗓️ |
 | Custom performance modes (add / rename / remove) | ✅ | ❌ | 🗓️ |
-| In-game metrics overlay with FPS | ✅ | ❌ | 🗓️ |
+| Metrics overlay | ✅ | ❌ | ✅ (FPS 🗓️) |
 | Advanced GPU power ranges | ✅ | ❌ | 🗓️ |
 | Windows G-Helper look | ✅ | ❌ | 🚧 |
 | Runs on Linux | ❌ | ✅ | ✅ |
@@ -84,8 +88,8 @@ Upstream's one-line installer left two system files in a form the app didn't rec
 
 ### 🚧 GPU detection that doesn't give up
 Linux puts the NVIDIA GPU to sleep when nothing uses it. Upstream only checks for the GPU once, at startup, without waking it. If the GPU was asleep at that moment, the app shows *"No NVIDIA GPU detected"* for the rest of the session, even while games are running on it. The mod:
-- reads the GPU model from the driver without waking the GPU, so detection works while it's asleep;
-- **re-checks automatically** after a driver install or update, after resume from sleep, and after a GPU mode change. A **Rescan** button is also planned;
+- ✅ reads the GPU model from the driver without waking the GPU, so detection works while it's asleep;
+- 🗓️ **re-checks automatically** after a driver install or update, after resume from sleep, and after a GPU mode change. A **Rescan** button is also planned;
 - never hides GPU controls without a reason. It shows why they're unavailable (driver too old, Eco mode, helper missing) and how to fix it.
 
 ### 🗓️ GPU tuning safety
@@ -97,13 +101,15 @@ This is G-Helper's undervolt recipe: a max clock cap plus a positive core offset
 ### 🗓️ Advanced GPU power
 An opt-in panel that uses G-Helper for Windows' ranges: Dynamic Boost up to 25 W, extra TGP up to 75 W and a temperature target from 75 to 87 °C. See [GPU Tweaking](#video_game-gpu-tweaking) for the details and risks.
 
-### 🗓️ Metrics overlay
-The Windows G-Helper overlay brought to Linux:
-- Light, Default, Full and Complete presets;
-- FPS, temperatures, fan, chart, power, load, RAM and battery;
-- size, transparency, colours and position.
+### 🚧 Metrics overlay
+The Windows G-Helper overlay brought to Linux. Open it with the **Overlay** button in the Laptop Keyboard header (right-click turns it on or off) or from the tray menu:
+- ✅ Light, Default, Full and Complete presets, with the same per-preset defaults as Windows;
+- ✅ temperatures, fan speed, power chart, power, load, RAM, battery and labels;
+- ✅ size, transparency, CPU and GPU colours, screen corner and "only in games";
+- ✅ always on top and click-through, so it never gets in the way of your game;
+- 🗓️ in-game FPS, through [MangoHud](https://github.com/flightlessmango/MangoHud).
 
-It works on X11 and Wayland (KDE, GNOME, Hyprland, Sway, COSMIC). In-game FPS comes from [MangoHud](https://github.com/flightlessmango/MangoHud), configured automatically to match your overlay settings.
+For Windows' `Ctrl + Shift + Alt + O`, add a keyboard shortcut in your desktop settings that runs `ghelper --overlay`.
 
 ### 🗓️ Richer tray
 Optional tray icons for **CPU W, GPU W and battery W**, next to the existing temperature icons. A full summary tooltip shows temperatures, load, power, fan speed and battery rate.
