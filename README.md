@@ -1,31 +1,41 @@
-# G-Helper Linux Mod - Lightweight control tool for Asus laptops on Linux
+<div align="center">
 
-A small, fast Armoury Crate alternative for Asus ROG and TUF laptops on Linux. It is a modified version of [g-helper-linux](https://github.com/utajum/g-helper-linux) that keeps everything g-helper-linux does, and works towards **full feature parity with [G-Helper for Windows](https://github.com/seerge/g-helper)**. It adds:
-- GPU overclocking that detects your GPU reliably;
-- safe undervolting with automatic revert;
-- an in-game metrics overlay;
-- a richer tray;
-- advanced GPU power controls;
-- the same clean look as the Windows app.
+<img src="https://capsule-render.vercel.app/api?type=waving&height=180&color=0:1C1C1C,60:2E2E2E,100:FF2020&text=G-Helper%20Linux%20Mod&fontColor=F0F0F0&fontSize=52&fontAlignY=38&desc=Lightweight%20Armoury%20Crate%20alternative%20for%20Asus%20laptops%20on%20Linux&descSize=16&descAlignY=60&animation=fadeIn" width="100%" alt="G-Helper Linux Mod" />
+
+<img src="install/ghelper.png" width="96" alt="G-Helper icon" />
+
+### Everything [g-helper-linux](https://github.com/utajum/g-helper-linux) does, plus the [G-Helper for Windows](https://github.com/seerge/g-helper) features Linux was missing
+
+[![GitHub release](https://img.shields.io/github/v/release/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&logo=github&color=3AAEEF&cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/total?style=for-the-badge&logo=linux&logoColor=white&color=06B48A&cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
+[![License](https://img.shields.io/github/license/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=A8A8A8&cacheSeconds=3600)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&logo=github&color=FF8000&cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/stargazers)
+
+[![Based on g-helper-linux](https://img.shields.io/badge/based%20on-g--helper--linux-2E2E2E?style=flat-square&logo=github)](https://github.com/utajum/g-helper-linux)
+[![Feature reference](https://img.shields.io/badge/feature%20reference-G--Helper%20for%20Windows-FF2020?style=flat-square&logo=windows)](https://github.com/seerge/g-helper)
+[![Made for ROG](https://img.shields.io/badge/tested%20on-ROG%20Flow%20X13%202022-FF2020?style=flat-square&logo=asus)](#)
+[![No Docker](https://img.shields.io/badge/no-Docker%20%C2%B7%20daemons%20%C2%B7%20custom%20kernel-06B48A?style=flat-square)](#gift-advantages)
+
+<a href="https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest"><img src="https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20Download-latest%20release-3AAEEF?style=for-the-badge" height="42" alt="Download latest release" /></a>
+&nbsp;
+<a href="#arrow_down-installation"><img src="https://img.shields.io/badge/%F0%9F%93%A6%20Install-one%20line-06B48A?style=for-the-badge" height="42" alt="One-line install" /></a>
+&nbsp;
+<a href="docs/mod/roadmap.md"><img src="https://img.shields.io/badge/%F0%9F%97%BA%EF%B8%8F%20Roadmap-what%E2%80%99s%20next-FF8000?style=for-the-badge" height="42" alt="Roadmap" /></a>
+
+**[What's new](#sparkles-whats-new-in-the-mod)** ·
+**[Features](#zap-features)** ·
+**[GPU Tweaking](#video_game-gpu-tweaking)** ·
+**[Install](#arrow_down-installation)** ·
+**[FAQ](#wrench-troubleshooting--faq)** ·
+**[Keybindings](#keyboard-keybindings)**
+
+</div>
+
+---
+
+A small, fast **Armoury Crate alternative** for Asus ROG and TUF laptops on Linux. It is a modified version of [g-helper-linux](https://github.com/utajum/g-helper-linux) that keeps everything g-helper-linux does, and works towards **full feature parity with [G-Helper for Windows](https://github.com/seerge/g-helper)**. That includes its clean look, GPU overclocking that detects your GPU reliably, safe undervolting with automatic revert, an in-game metrics overlay, a richer tray and advanced GPU power controls.
 
 It's developed and tested on the **ROG Flow X13 (2022)**, with a Ryzen 9 6900HS and an RTX 3050 Ti. It supports the same models as g-helper-linux: Zephyrus G14 / G15 / G16 / M16, Flow X13 / X16 / Z13, Strix and Scar, TUF, ProArt, ROG Ally and more.
-
-[![GitHub release](https://img.shields.io/github/v/release/VasuPadsumbia/G-Helper-linux-mod?cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/total?cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
-[![License](https://img.shields.io/github/license/VasuPadsumbia/G-Helper-linux-mod?cacheSeconds=3600)](LICENSE)
-[![Based on g-helper-linux](https://img.shields.io/badge/based%20on-g--helper--linux-blue)](https://github.com/utajum/g-helper-linux)
-[![Feature reference: G-Helper](https://img.shields.io/badge/feature%20reference-G--Helper%20for%20Windows-red)](https://github.com/seerge/g-helper)
-
-**[⬇️ Download latest release](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest)** &nbsp;·&nbsp; **[📦 One-line install](#arrow_down-installation)** &nbsp;·&nbsp; **[🗺️ Roadmap](docs/mod/roadmap.md)** &nbsp;·&nbsp; **[🧩 Design docs](docs/mod/)**
-
-**⭐ Like the project? Star it and help spread the word.**
-
-- [What's new in the mod](#sparkles-whats-new-in-the-mod)
-- [Features](#zap-features)
-- [GPU Tweaking](#video_game-gpu-tweaking)
-- [Installation](#arrow_down-installation)
-- [Troubleshooting / FAQ](#wrench-troubleshooting--faq)
-- [Keybindings](#keyboard-keybindings)
 
 > [!IMPORTANT]
 > **Early development.** Each mod feature below is marked ✅ **done**, 🚧 **in progress** or 🗓️ **planned**. Only ✅ features are in the current release. Everything inherited from g-helper-linux works today.
@@ -40,6 +50,34 @@ It's developed and tested on the **ROG Flow X13 (2022)**, with a Ryzen 9 6900HS 
 6. **Familiar.** The same modes, fan curves and settings file format as G-Helper for Windows.
 
 ## :sparkles: What's new in the mod
+
+| | Feature | Status |
+|:-:|---|:-:|
+| 🧰 | First-run fix: no "System files need attention" popup after install | ✅ Done |
+| 🔍 | GPU detection that works while the GPU sleeps, plus automatic rescan | 🚧 In progress |
+| 🎨 | The Windows G-Helper look | 🚧 In progress |
+| 🛡️ | 30-second test and automatic revert for GPU tuning | 🗓️ Planned |
+| 📉 | One-click GPU undervolt | 🗓️ Planned |
+| ⚡ | Advanced GPU power (opt-in, at your own risk) | 🗓️ Planned |
+| 📊 | In-game metrics overlay | 🗓️ Planned |
+| 🔋 | Richer tray: CPU / GPU / battery watts | 🗓️ Planned |
+| 🌡️ | CPU temperature limit and safe undervolting | 🗓️ Planned |
+| 🧩 | Custom performance modes: add, rename, remove | 🗓️ Planned |
+| 🔌 | XG Mobile panel and per-app dGPU list | 🗓️ Planned |
+
+### 🆚 How it compares
+
+| | G-Helper for Windows | g-helper-linux | **G-Helper Linux Mod** |
+|---|:-:|:-:|:-:|
+| Performance and GPU modes, fan curves, power limits | ✅ | ✅ | ✅ |
+| NVIDIA clock offsets | ✅ | ✅ (can miss a sleeping GPU) | ✅ (detects it reliably) 🚧 |
+| Safe test-and-revert for overclocks and undervolts | ❌ | ❌ | 🗓️ |
+| Custom performance modes (add / rename / remove) | ✅ | ❌ | 🗓️ |
+| In-game metrics overlay with FPS | ✅ | ❌ | 🗓️ |
+| Advanced GPU power ranges | ✅ | ❌ | 🗓️ |
+| Windows G-Helper look | ✅ | ❌ | 🚧 |
+| Runs on Linux | ❌ | ✅ | ✅ |
+
 
 ### ✅ First-run fix
 Upstream's one-line installer left two system files in a form the app didn't recognise. Right after a fresh install, it showed a *"System files need attention"* popup about the hardware access rules and kernel modules. The mod's installer writes both exactly as the app expects. It also makes the `uinput` and `i2c-dev` modules load at every boot, not just during install.
@@ -73,10 +111,13 @@ Optional tray icons for **CPU W, GPU W and battery W**, next to the existing tem
 ### 🗓️ CPU temperature limit and safe undervolting
 Adds a CPU temperature limit, like the Windows app. The same 30-second test is added to AMD Curve Optimizer and iGPU undervolting.
 
-### 🗓️ The Windows look
+### 🚧 The Windows look
 The flat dark G-Helper interface:
 - square mode tiles with a coloured border on the active mode (green Silent, blue Balanced, red Turbo, orange Custom);
 - the same Fans + Power layout as Windows.
+
+### 🗓️ Custom performance modes
+As in G-Helper for Windows, you'll be able to **add**, **rename** and **remove** your own modes in Fans + Power. Each new mode starts from Silent, Balanced or Turbo and gets its own fan curves, power limits and GPU settings.
 
 ### 🗓️ XG Mobile panel and per-app dGPU list
 - XG Mobile dock status (attached / locked) with eGPU switching and a logout reminder.
@@ -192,29 +233,57 @@ Settings are stored in `~/.config/ghelper/config.json`. They use the same keys a
 
 ## :wrench: Troubleshooting / FAQ
 
-**"No NVIDIA GPU detected", but my games run on the NVIDIA GPU.**
+<details>
+<summary><b>"No NVIDIA GPU detected", but my games run on the NVIDIA GPU.</b></summary>
+
 The GPU was asleep when G-Helper started, which is a known upstream limitation. The mod's detection fix (🚧) solves this. Until it ships, opening **Fans + Power** while a game or other app is using the GPU makes it try again, and it usually finds the GPU.
 
-**I don't see the GPU clock offset sliders.**
+</details>
+
+<details>
+<summary><b>I don't see the GPU clock offset sliders.</b></summary>
+
 Check three things:
 - your NVIDIA driver is version 555 or newer (`nvidia-smi`);
 - the GPU mode is not Eco;
 - the installer has been run, because it installs the GPU helper the sliders need. Re-running the one-line install repairs it.
 
-**"System files need attention" popup.**
+</details>
+
+<details>
+<summary><b>"System files need attention" popup.</b></summary>
+
 Click **Install / Update** and it fixes itself. Installs made with the mod's installer don't show this popup.
 
-**My settings keep changing back.**
+</details>
+
+<details>
+<summary><b>My settings keep changing back.</b></summary>
+
 Another control app is probably running. Check with `systemctl status asusd supergfxd`, and see [Coming from g-helper-linux or asusctl](#coming-from-g-helper-linux-or-asusctl).
 
-**Curve Optimizer (CPU undervolt) doesn't appear.**
+</details>
+
+<details>
+<summary><b>Curve Optimizer (CPU undervolt) doesn't appear.</b></summary>
+
 It needs the [ryzen_smu](https://github.com/amkillam/ryzen_smu) kernel module, which is installed separately. With Secure Boot on, that module must also be signed. The feature stays hidden until the module is loaded. See [docs/amd-undervolting.md](docs/amd-undervolting.md).
 
-**Refresh rate controls don't work on Wayland.**
+</details>
+
+<details>
+<summary><b>Refresh rate controls don't work on Wayland.</b></summary>
+
 They depend on your desktop. KDE, GNOME, wlroots-based compositors and X11 are supported through their own tools. X11 gives the most complete control.
 
-**What do the AMD settings mean?**
+</details>
+
+<details>
+<summary><b>What do the AMD settings mean?</b></summary>
+
 See [docs/mod/amd-explained.md](docs/mod/amd-explained.md). It's a plain-language explanation of ryzenadj, Curve Optimizer and AMD GPU support.
+
+</details>
 
 ## :keyboard: Keybindings
 
@@ -274,3 +343,13 @@ The app does not collect or send any personal information. It only connects to t
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. OVERCLOCKING, UNDERVOLTING OR RAISING POWER LIMITS MAY CAUSE SYSTEM INSTABILITY OR HARDWARE DAMAGE. USE AT YOUR OWN RISK.
 
 Licensed under GPL-3.0, the same as g-helper-linux and G-Helper.
+
+<div align="center">
+
+---
+
+Made on a ROG Flow X13 (2022) · Built on [g-helper-linux](https://github.com/utajum/g-helper-linux) by utajum · Inspired by [G-Helper](https://github.com/seerge/g-helper) by seerge
+
+**[⬆ Back to top](#)**
+
+</div>
