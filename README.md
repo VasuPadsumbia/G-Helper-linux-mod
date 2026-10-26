@@ -1,159 +1,75 @@
-<p align="center">
-  <a href="https://github.com/VasuPadsumbia/G-Helper-linux-mod">
-    <img src="https://capsule-render.vercel.app/api?type=venom&height=200&text=G-HELPER%20LINUX%20MOD&fontSize=56&color=0:0d1117,100:00ff41&stroke=00ff41&fontColor=00ff41&animation=twinkling&desc=%3E_%20BASED%20ON%20G-HELPER%20LINUX%20%7C%20STATUS%3A%20IN%20DEVELOPMENT&descAlignY=75&descSize=16&fontFamily=monospace" />
-  </a>
-</p>
+# G-Helper Linux Mod - Lightweight control tool for Asus laptops on Linux
 
-<div align="center">
+A modified version of [g-helper-linux](https://github.com/utajum/g-helper-linux) that keeps everything it does and adds the parts of [G-Helper for Windows](https://github.com/seerge/g-helper) that are still missing on Linux. That means reliable GPU tuning, a metrics overlay, a richer tray, advanced GPU power settings and the Windows look. It's developed and tested on the ROG Flow X13 (2022), and works on the same Asus laptops as g-helper-linux.
 
-[![GitHub Release](https://img.shields.io/github/v/release/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=4a9eff&cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest)
-[![Total Binary Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/ghelper?style=for-the-badge&color=28c840&cacheSeconds=3600&label=total%20binary%20downloads)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
-[![Total AppImage Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/GHelper-x86_64.AppImage?style=for-the-badge&color=28c840&cacheSeconds=3600&label=total%20appimage%20downloads)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
-[![License](https://img.shields.io/github/license/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=a0c8ff&cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/blob/master/LICENSE)
-[![Upstream](https://img.shields.io/badge/based_on-g--helper--linux-ff8c42?style=for-the-badge)](https://github.com/utajum/g-helper-linux)
-[![Stars](https://img.shields.io/github/stars/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=f0c040&cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/stargazers)
+[![GitHub release](https://img.shields.io/github/v/release/VasuPadsumbia/G-Helper-linux-mod?cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/total?cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
+[![License](https://img.shields.io/github/license/VasuPadsumbia/G-Helper-linux-mod?cacheSeconds=3600)](LICENSE)
+[![Based on g-helper-linux](https://img.shields.io/badge/based%20on-g--helper--linux-blue)](https://github.com/utajum/g-helper-linux)
 
-</div>
+**[Download latest release](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest)**
 
-```
- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-         ╔══[ SYSTEM ]════════════════════════════════╗
-         ║  >_ BASE:   G-HELPER LINUX                 ║
-         ║  >_ TARGET: G-HELPER FOR WINDOWS PARITY    ║
-         ║  >_ STATUS: IN DEVELOPMENT...              ║
-         ╚════════════════════════════════════════════╝
-```
+- [Installation](#arrow_down-installation)
+- [What the mod adds](#gift-what-the-mod-adds)
+- [Design documents](docs/mod/)
 
-## `░▒▓█ ╔══[ WHAT IS THIS ]══╗ █▓▒░`
+> **Early development.** Features are marked **done** or **planned**. Planned features are not in the current release yet.
 
-**G-Helper Linux Mod** is a modified version of
-[g-helper-linux](https://github.com/utajum/g-helper-linux) by utajum, the ASUS laptop control app for Linux.
+## :gift: What the mod adds
 
-Everything g-helper-linux does is still here, unchanged. This mod adds the parts of
-[G-Helper for Windows](https://github.com/seerge/g-helper) that the Linux port doesn't have yet,
-or doesn't do well. That means GPU tuning that is detected reliably, a hardware overlay, a richer
-tray, an advanced GPU power option and the Windows look. It's developed and tested on an
-**ASUS ROG Flow X13 (2022)** with a Ryzen 6000 CPU and an NVIDIA RTX GPU.
+1. **First-run fix** *(done)*: after installing, the app no longer reports "System files need attention".
+2. **GPU driver rescan** *(planned)*: GPU tuning detects the NVIDIA driver again after an install or update, after resume, and after a GPU mode change. When tuning is unavailable, the app says why instead of hiding the controls.
+3. **GPU tuning safety** *(planned)*: new clock offsets run for a 30-second test and revert automatically unless confirmed.
+4. **GPU undervolt** *(planned)*: one-click clock cap plus core offset, like G-Helper for Windows.
+5. **Advanced GPU power** *(planned)*: G-Helper for Windows ranges for Dynamic Boost and TGP. Off by default, not advised, and used at your own risk.
+6. **Metrics overlay** *(planned)*: Light, Default, Full and Complete presets on X11 and Wayland, with in-game FPS through MangoHud.
+7. **Richer tray** *(planned)*: CPU, GPU and battery watts, load and fan speed next to the temperatures.
+8. **CPU temperature limit** *(planned)*, plus the same safe test for undervolting.
+9. **Windows look** *(planned)*: the flat dark G-Helper interface with mode colours.
+10. **XG Mobile panel** *(planned)*: dock status and eGPU switching.
+11. **Per-app dGPU list** *(planned)*: run selected apps on the NVIDIA GPU.
 
-> This mod is in early development. The features below are marked **DONE** or **PLANNED**.
-> Planned features aren't in the current release yet.
+### :zap: Features from g-helper-linux
 
----
+Everything below comes from g-helper-linux and works the same way. See the [g-helper-linux README](https://github.com/utajum/g-helper-linux#readme) for details.
 
-## `░▒▓█ ╔══[ WHAT THE MOD ADDS ]══╗ █▓▒░`
+1. Performance modes: Silent - Balanced - Turbo, with custom fan curves and power limits
+2. GPU modes: Eco - Standard - Optimized - Ultimate
+3. Battery charge limit
+4. Screen refresh rate and panel overdrive
+5. NVIDIA Dynamic Boost, temperature target and clock offsets
+6. AMD Curve Optimizer and Intel undervolting
+7. Keyboard RGB (Aura), Anime Matrix and Slash lighting
+8. XG Mobile dock lights and dock fan curve
+9. ROG Ally controller settings, NumberPad, FnLock and hotkeys
+10. Asus and Logitech mice and other peripherals
+11. CPU and GPU temperature, fan speed and battery monitoring in the tray
+12. Self-updater and autostart
 
-```
-┌──────────────────────────────────────────────────────────────────────┐
-│  [DONE]     First-run fix      Installer writes udev rules and       │
-│                                modules-load.d the way the app        │
-│                                checks them (no "system files need    │
-│                                attention" popup after install)       │
-│  [PLANNED]  GPU driver rescan  GPU tuning re-detects the driver      │
-│                                after install / update / resume /     │
-│                                mode change; shows WHY it's off       │
-│  [PLANNED]  GPU tuning safety  30 s test, auto-revert, crash reset   │
-│  [PLANNED]  GPU undervolt      One-click clock cap + core offset     │
-│  [PLANNED]  Advanced GPU power Windows G-Helper ranges for Dynamic   │
-│                                Boost / TGP — opt-in, own risk        │
-│  [PLANNED]  Hardware overlay   Light / Default / Full / Complete,    │
-│                                FPS via MangoHud, X11 + Wayland       │
-│  [PLANNED]  Richer tray        CPU / GPU / battery watts, load, fan  │
-│  [PLANNED]  CPU temp limit     Plus test-and-revert for undervolt    │
-│  [PLANNED]  Windows look       G-Helper flat dark UI + mode colours  │
-│  [PLANNED]  XG Mobile panel    Dock status, eGPU switch              │
-│  [PLANNED]  Per-app dGPU list  Run chosen apps on the NVIDIA GPU     │
-└──────────────────────────────────────────────────────────────────────┘
-```
+### :video_game: GPU Tweaking
 
-The design for each feature is in **[docs/mod/](docs/mod/)**.
+On NVIDIA GPUs, the core and memory clock offsets need driver 555 or newer, and the GPU must not be in Eco mode. On the Flow X13 (2022), the firmware limits the GPU to 35 W plus 5 W of Dynamic Boost.
 
-### `╠══[ ADVANCED GPU POWER — READ THIS ]══╣`
+The planned **Advanced GPU power** option sends the same higher values that G-Helper for Windows can send. The firmware may ignore or clamp them, so the app will show what was actually applied. Flashing a modified GPU VBIOS is not supported.
 
-Laptop GPUs are limited by their own firmware and by ASUS's firmware. On the Flow X13, the limit is
-35 W plus 5 W of Dynamic Boost. The planned advanced option sends the same higher values that
-G-Helper for Windows can send. **It is off by default. It is not advised, and you use it at your
-own risk.** The firmware may ignore or clamp those values, so the app will show what the firmware
-actually applied. Flashing a modified GPU VBIOS is not supported and never will be.
+## :arrow_down: Installation
 
----
-
-## `░▒▓█ ╔══[ INHERITED FROM G-HELPER LINUX ]══╗ █▓▒░`
-
-These features all come from g-helper-linux:
-- Performance modes and custom fan curves.
-- Battery charge limit.
-- GPU modes (Eco / Standard / Optimized / Ultimate).
-- CPU power limits, NVIDIA Dynamic Boost and NVIDIA clock offsets.
-- AMD Curve Optimizer and Intel undervolting.
-- Refresh rate and panel overdrive.
-- Aura RGB, AniMe Matrix and Slash.
-- Audio DSP.
-- ROG Ally support.
-- XG Mobile dock lights.
-- Steam integration.
-- NumberPad.
-- Peripherals.
-- Self-updater.
-
-For how each of these works, the GPU mode reboot rules, the kernel feature matrix and the
-project structure, see the
-**[g-helper-linux README](https://github.com/utajum/g-helper-linux#readme)**. Those parts work the same here.
-
----
-
-## `░▒▓█ ╔══[ DISCLAIMER ]══╗ █▓▒░`
-
-```
-╔══[ TERMS OF USE ]══════════════════════════════════════════════╗
-║                                                                 ║
-║  This software writes to ASUS firmware through kernel sysfs     ║
-║  attributes and ACPI/WMI methods — the same interfaces ASUS     ║
-║  Armoury Crate uses on Windows. It changes GPU power state,     ║
-║  fan speeds, power limits, clocks and voltages.                 ║
-║                                                                 ║
-║  Incorrect or interrupted writes can leave hardware in an       ║
-║  unexpected state; in rare cases a CMOS reset may be needed.    ║
-║  Overclocking, undervolting and raising power limits can make   ║
-║  the system unstable or shorten hardware life.                  ║
-║                                                                 ║
-║  Provided AS-IS with no warranty. The authors are not           ║
-║  responsible for hardware damage.                               ║
-║                                                                 ║
-╚═════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## `░▒▓█ ╔══[ REQUIREMENTS ]══╗ █▓▒░`
-
-Same as g-helper-linux:
-- Any modern distro with **glibc 2.38+**, such as Ubuntu 24.04+, Debian 13+, Fedora 39+ or Arch.
+Requirements:
+- Any modern distro with glibc 2.38+, such as Ubuntu 24.04+, Debian 13+, Fedora 39+ or Arch.
 - X11 or Wayland.
-- Kernel 6.2+ recommended, 6.9+ for all features.
-- The `asus-nb-wmi` module, which ASUS laptops load by default.
+- Kernel 6.2+, or 6.9+ for all features.
 
-The mod doesn't need Docker, distro packages or a custom kernel.
+No Docker, distro packages or custom kernel needed.
 
----
-
-## `░▒▓█ ╔══[ INSTALLATION ]══╗ █▓▒░`
-
-### `╠══[ ONE-LINER INSTALL ]══╣`
+**Install**
 
 ```bash
 curl -sL https://raw.githubusercontent.com/VasuPadsumbia/G-Helper-linux-mod/master/install/install.sh | sudo bash
 ```
 
-This installs the app to `/opt/ghelper`, along with the hardware access rules, the GPU helper and
-a menu entry. Reboot once afterwards so the hardware permissions take full effect.
+Reboot once after installing.
 
-### `╠══[ SWITCHING FROM G-HELPER LINUX OR ASUSCTL ]══╣`
-
-Keep only one of these apps installed. This mod installs to the same places as g-helper-linux,
-so uninstall g-helper-linux first. **asusctl / asusd** controls the same hardware, and the two will
-overwrite each other's settings, so stop or uninstall it as well.
-
-### `╠══[ UNINSTALL ]══╣`
+**Uninstall**
 
 ```bash
 curl -sL https://raw.githubusercontent.com/VasuPadsumbia/G-Helper-linux-mod/master/install/install.sh | sudo bash -s -- --uninstall
@@ -161,7 +77,7 @@ curl -sL https://raw.githubusercontent.com/VasuPadsumbia/G-Helper-linux-mod/mast
 
 Your settings in `~/.config/ghelper` are kept.
 
-### `╠══[ APPIMAGE ]══╣`
+**AppImage**
 
 ```bash
 curl -sL https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest/download/GHelper-x86_64.AppImage -o GHelper-x86_64.AppImage
@@ -169,49 +85,26 @@ chmod +x GHelper-x86_64.AppImage
 ./GHelper-x86_64.AppImage
 ```
 
-### `╠══[ BUILD FROM SOURCE ]══╣`
+**Coming from g-helper-linux or asusctl?** Keep only one control app installed. Uninstall g-helper-linux first, because this mod installs to the same places. Also stop or remove asusctl/asusd, because it controls the same hardware.
+
+**Build from source**
 
 ```bash
-# Ubuntu/Debian
 sudo apt install dotnet-sdk-10.0 clang zlib1g-dev libpipewire-0.3-dev libwayland-dev pkg-config
-
-./build.sh                      # Native AOT build → dist/ghelper
-sudo ./install/install-local.sh # install the local build
+./build.sh
+sudo ./install/install-local.sh
 ```
 
-For Fedora and Arch packages and the developer build options, see the
-[g-helper-linux build guide](https://github.com/utajum/g-helper-linux#readme).
+### Libraries and projects used
 
----
+- [g-helper-linux](https://github.com/utajum/g-helper-linux) by utajum: the project this mod is built on ([support the author](https://buymeacoffee.com/utajum))
+- [G-Helper](https://github.com/seerge/g-helper) by seerge: the original Windows app
+- [Avalonia UI](https://avaloniaui.net/), [RyzenAdj](https://github.com/FlyGoat/RyzenAdj), [ryzen_smu](https://github.com/amkillam/ryzen_smu), [MangoHud](https://github.com/flightlessmango/MangoHud) and others. The full list is in [docs/mod/third-party.md](docs/mod/third-party.md).
 
-## `░▒▓█ ╔══[ STAYING IN SYNC ]══╗ █▓▒░`
+### Disclaimers
 
-This repository is a git fork that keeps g-helper-linux's full history. Upstream fixes are merged
-in regularly, and the mod's own changes are kept in separate files wherever possible. Fixes that
-help everyone are offered back to g-helper-linux.
+This app changes hardware settings through the same firmware interfaces Asus Armoury Crate uses. That includes power limits, fan speeds, GPU modes, clock offsets and voltages. Overclocking, undervolting and raising power limits can make your system unstable. Use them at your own risk. The software is provided as is, without warranty, and the authors are not responsible for hardware damage.
 
----
+"ROG", "TUF" and "Armoury Crate" are trademarks of ASUSTeK Computer Inc. This project is not affiliated with Asus.
 
-## `░▒▓█ ╔══[ CREDITS ]══╗ █▓▒░`
-
-- [g-helper-linux](https://github.com/utajum/g-helper-linux) by utajum: the project this mod is
-  built on ([support the author](https://buymeacoffee.com/utajum)).
-- [G-Helper](https://github.com/seerge/g-helper) by seerge: the original Windows app and the
-  feature reference.
-- Every other project the mod uses is linked in
-  **[docs/mod/third-party.md](docs/mod/third-party.md)**, including RyzenAdj, ryzen_smu, MangoHud
-  and Avalonia.
-
----
-
-## `░▒▓█ ╔══[ LICENSE ]══╗ █▓▒░`
-
-GPL-3.0, the same as g-helper-linux and G-Helper.
-
-<div align="center">
-
-```
-  ░▒▓█ END OF TRANSMISSION █▓▒░
-```
-
-</div>
+Licensed under GPL-3.0, the same as g-helper-linux and G-Helper.
