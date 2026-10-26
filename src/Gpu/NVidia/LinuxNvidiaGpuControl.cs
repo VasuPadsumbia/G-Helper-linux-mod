@@ -30,7 +30,10 @@ public class LinuxNvidiaGpuControl : IGpuControl
     public LinuxNvidiaGpuControl()
     {
         _hwmonDir = SysfsHelper.FindHwmonByName("nvidia");
-        _gpuName = QueryGpuName();
+        // nvidia-smi is skipped while the dGPU is runtime-suspended (normal at idle on
+        // Optimus laptops), so at startup it often returns nothing. Fall back to the
+        // driver's /proc info, which is readable without waking the GPU.
+        _gpuName = QueryGpuName() ?? ReadProcGpuModel();
         _available = !string.IsNullOrEmpty(_gpuName);
 
         if (_available)
@@ -703,6 +706,39 @@ public class LinuxNvidiaGpuControl : IGpuControl
     {
         var output = RunNvidiaSmi("--query-gpu=name", "--format=csv,noheader");
         return output?.Trim();
+    }
+
+    /// <summary>GPU model from /proc/driver/nvidia/gpus/*/information ("Model: ...").
+    /// Present only while the nvidia module is loaded; reading it does not resume
+    /// a suspended dGPU.</summary>
+    private static string? ReadProcGpuModel()
+    {
+        try
+        {
+            const string root = "/proc/driver/nvidia/gpus";
+            if (!Directory.Exists(root))
+                return null;
+            foreach (var dir in Directory.GetDirectories(root))
+            {
+                var info = Path.Combine(dir, "information");
+                if (!File.Exists(info))
+                    continue;
+                foreach (var line in File.ReadLines(info))
+                {
+                    if (line.StartsWith("Model:", StringComparison.Ordinal))
+                    {
+                        var model = line["Model:".Length..].Trim();
+                        if (model.Length > 0)
+                            return model;
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Helpers.Logger.WriteLine("NVIDIA: reading /proc GPU info failed", ex);
+        }
+        return null;
     }
 
     // Circuit breaker: when the dGPU is wedged/absent, nvidia-smi hangs until its
