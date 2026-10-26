@@ -685,6 +685,7 @@ public static class Nepali
         ["monitor_power_load"] = "पावर र लोड",
         ["monitor_gpu_load"] = "GPU लोड %",
         ["monitor_gpu_power"] = "GPU पावर W",
+        ["monitor_cpu_power"] = "CPU पावर W",
         ["monitor_battery_power"] = "ब्याट्री W",
 
         // AURA MODES

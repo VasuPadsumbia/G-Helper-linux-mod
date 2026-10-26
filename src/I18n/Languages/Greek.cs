@@ -541,6 +541,7 @@ public static class Greek
         ["monitor_power_load"] = "Ισχύς & φορτίο",
         ["monitor_gpu_load"] = "Φορτίο GPU %",
         ["monitor_gpu_power"] = "Ισχύς GPU W",
+        ["monitor_cpu_power"] = "Ισχύς CPU W",
         ["monitor_battery_power"] = "Μπαταρία W",
 
         // AURA MODES

@@ -538,6 +538,7 @@ public static class Czech
         ["monitor_power_load"] = "Výkon a zátěž",
         ["monitor_gpu_load"] = "Zátěž GPU %",
         ["monitor_gpu_power"] = "Výkon GPU W",
+        ["monitor_cpu_power"] = "Výkon CPU W",
         ["monitor_battery_power"] = "Baterie W",
 
         // AURA MODES

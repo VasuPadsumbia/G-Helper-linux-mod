@@ -685,6 +685,7 @@ public static class Slovenian
         ["monitor_power_load"] = "Napajanje in obremenitev",
         ["monitor_gpu_load"] = "Obremenitev GPU %",
         ["monitor_gpu_power"] = "Napajanje GPU W",
+        ["monitor_cpu_power"] = "Napajanje CPU W",
         ["monitor_battery_power"] = "Baterija W",
 
         // AURA MODES

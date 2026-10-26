@@ -538,6 +538,7 @@ public static class Ukrainian
         ["monitor_power_load"] = "Потужність і навантаження",
         ["monitor_gpu_load"] = "Навантаження GPU %",
         ["monitor_gpu_power"] = "Потужність GPU Вт",
+        ["monitor_cpu_power"] = "Потужність CPU Вт",
         ["monitor_battery_power"] = "Батарея Вт",
 
         // AURA MODES

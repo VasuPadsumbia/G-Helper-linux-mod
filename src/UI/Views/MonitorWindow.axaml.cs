@@ -37,6 +37,7 @@ public partial class MonitorWindow : Window
     // Power & load series data
     private readonly ObservableCollection<ObservableValue> _gpuLoadValues = [];
     private readonly ObservableCollection<ObservableValue> _gpuPowerValues = [];
+    private readonly ObservableCollection<ObservableValue> _cpuPowerValues = [];
     private readonly ObservableCollection<ObservableValue> _batteryPowerValues = [];
 
     // Series references for relabeling on language change
@@ -47,6 +48,7 @@ public partial class MonitorWindow : Window
     private LineSeries<ObservableValue> _midFanSeries = null!;
     private LineSeries<ObservableValue> _gpuLoadSeries = null!;
     private LineSeries<ObservableValue> _gpuPowerSeries = null!;
+    private LineSeries<ObservableValue> _cpuPowerSeries = null!;
     private LineSeries<ObservableValue> _batteryPowerSeries = null!;
 
     // G-Helper palette
@@ -118,6 +120,7 @@ public partial class MonitorWindow : Window
         _midFanSeries.Name = Labels.Get("mid_fan");
         _gpuLoadSeries.Name = Labels.Get("monitor_gpu_load");
         _gpuPowerSeries.Name = Labels.Get("monitor_gpu_power");
+        _cpuPowerSeries.Name = Labels.Get("monitor_cpu_power");
         _batteryPowerSeries.Name = Labels.Get("monitor_battery_power");
     }
 
@@ -157,7 +160,8 @@ public partial class MonitorWindow : Window
         _gpuLoadSeries = CreateLineSeries(_gpuLoadValues, "GPU Load %", Turquoise);
         _gpuPowerSeries = CreateLineSeries(_gpuPowerValues, "GPU Power W", Orange);
         _batteryPowerSeries = CreateLineSeries(_batteryPowerValues, "Battery W", Gold);
-        chartPower.Series = new ISeries[] { _gpuLoadSeries, _gpuPowerSeries, _batteryPowerSeries };
+        _cpuPowerSeries = CreateLineSeries(_cpuPowerValues, "CPU Power W", BlueCpu);
+        chartPower.Series = new ISeries[] { _gpuLoadSeries, _cpuPowerSeries, _gpuPowerSeries, _batteryPowerSeries };
         chartPower.YAxes = [CreateYAxis(0, null)];
         chartPower.XAxes = [CreateTimeAxis()];
         ApplyChartTheme(chartPower);
@@ -259,6 +263,10 @@ public partial class MonitorWindow : Window
             }
             AddValue(_gpuLoadValues, gpuLoad.HasValue && gpuLoad.Value >= 0 ? gpuLoad.Value : 0);
             AddValue(_gpuPowerValues, gpuPower.HasValue && gpuPower.Value >= 0 ? gpuPower.Value : 0);
+
+            // mod: CPU package power (APU PPT or RAPL); gap in the line when unreadable.
+            double? cpuW = Helpers.CpuPower.GetWatts();
+            AddValue(_cpuPowerValues, cpuW.HasValue ? Math.Round(cpuW.Value, 1) : null);
 
             // Battery power (show 0 when idle so line stays visible)
             double batteryW = 0;

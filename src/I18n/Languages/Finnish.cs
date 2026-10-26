@@ -541,6 +541,7 @@ public static class Finnish
         ["monitor_power_load"] = "Teho ja kuorma",
         ["monitor_gpu_load"] = "GPU-kuorma %",
         ["monitor_gpu_power"] = "GPU-teho W",
+        ["monitor_cpu_power"] = "CPU-teho W",
         ["monitor_battery_power"] = "Akku W",
 
         // AURA MODES

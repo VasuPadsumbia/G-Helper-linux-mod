@@ -685,6 +685,7 @@ public static class Malay
         ["monitor_power_load"] = "Kuasa & Beban",
         ["monitor_gpu_load"] = "Beban GPU %",
         ["monitor_gpu_power"] = "Kuasa GPU W",
+        ["monitor_cpu_power"] = "Kuasa CPU W",
         ["monitor_battery_power"] = "Bateri W",
 
         // AURA MODES

@@ -685,6 +685,7 @@ public static class Bengali
         ["monitor_power_load"] = "পাওয়ার ও লোড",
         ["monitor_gpu_load"] = "GPU লোড %",
         ["monitor_gpu_power"] = "GPU পাওয়ার W",
+        ["monitor_cpu_power"] = "CPU পাওয়ার W",
         ["monitor_battery_power"] = "ব্যাটারি W",
 
         // AURA MODES

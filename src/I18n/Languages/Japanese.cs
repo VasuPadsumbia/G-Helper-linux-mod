@@ -541,6 +541,7 @@ public static class Japanese
         ["monitor_power_load"] = "電力と負荷",
         ["monitor_gpu_load"] = "GPU負荷 %",
         ["monitor_gpu_power"] = "GPU電力 W",
+        ["monitor_cpu_power"] = "CPU電力 W",
         ["monitor_battery_power"] = "バッテリー W",
 
         // AURA MODES

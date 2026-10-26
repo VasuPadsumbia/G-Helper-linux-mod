@@ -538,6 +538,7 @@ public static class Turkish
         ["monitor_power_load"] = "Güç ve Yük",
         ["monitor_gpu_load"] = "GPU Yükü %",
         ["monitor_gpu_power"] = "GPU Gücü W",
+        ["monitor_cpu_power"] = "CPU Gücü W",
         ["monitor_battery_power"] = "Pil W",
 
         // AURA MODES

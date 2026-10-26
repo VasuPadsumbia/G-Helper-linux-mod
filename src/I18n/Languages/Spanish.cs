@@ -538,6 +538,7 @@ public static class Spanish
         ["monitor_power_load"] = "Potencia y carga",
         ["monitor_gpu_load"] = "Carga GPU %",
         ["monitor_gpu_power"] = "Potencia GPU W",
+        ["monitor_cpu_power"] = "Potencia CPU W",
         ["monitor_battery_power"] = "Batería W",
 
         // AURA MODES

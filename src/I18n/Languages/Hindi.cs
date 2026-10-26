@@ -685,6 +685,7 @@ public static class Hindi
         ["monitor_power_load"] = "पावर और लोड",
         ["monitor_gpu_load"] = "GPU लोड %",
         ["monitor_gpu_power"] = "GPU पावर W",
+        ["monitor_cpu_power"] = "CPU पावर W",
         ["monitor_battery_power"] = "बैटरी W",
 
         // AURA MODES

@@ -685,6 +685,7 @@ public static class Lithuanian
         ["monitor_power_load"] = "Galia ir apkrova",
         ["monitor_gpu_load"] = "GPU apkrova %",
         ["monitor_gpu_power"] = "GPU galia W",
+        ["monitor_cpu_power"] = "CPU galia W",
         ["monitor_battery_power"] = "Baterija W",
 
         // AURA MODES

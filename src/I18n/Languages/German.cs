@@ -538,6 +538,7 @@ public static class German
         ["monitor_power_load"] = "Leistung & Last",
         ["monitor_gpu_load"] = "GPU-Last %",
         ["monitor_gpu_power"] = "GPU-Leistung W",
+        ["monitor_cpu_power"] = "CPU-Leistung W",
         ["monitor_battery_power"] = "Akku W",
 
         // AURA MODES

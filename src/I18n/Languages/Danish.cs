@@ -541,6 +541,7 @@ public static class Danish
         ["monitor_power_load"] = "Effekt og belastning",
         ["monitor_gpu_load"] = "GPU-belastning %",
         ["monitor_gpu_power"] = "GPU-effekt W",
+        ["monitor_cpu_power"] = "CPU-effekt W",
         ["monitor_battery_power"] = "Batteri W",
 
         // AURA MODES

@@ -538,6 +538,7 @@ public static class Romanian
         ["monitor_power_load"] = "Putere și sarcină",
         ["monitor_gpu_load"] = "Sarcină GPU %",
         ["monitor_gpu_power"] = "Putere GPU W",
+        ["monitor_cpu_power"] = "Putere CPU W",
         ["monitor_battery_power"] = "Baterie W",
 
         // AURA MODES

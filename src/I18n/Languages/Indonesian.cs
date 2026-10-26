@@ -541,6 +541,7 @@ public static class Indonesian
         ["monitor_power_load"] = "Daya & Beban",
         ["monitor_gpu_load"] = "Beban GPU %",
         ["monitor_gpu_power"] = "Daya GPU W",
+        ["monitor_cpu_power"] = "Daya CPU W",
         ["monitor_battery_power"] = "Baterai W",
 
         // AURA MODES

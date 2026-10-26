@@ -685,6 +685,7 @@ public static class Filipino
         ["monitor_power_load"] = "Power at Load",
         ["monitor_gpu_load"] = "GPU Load %",
         ["monitor_gpu_power"] = "GPU Power W",
+        ["monitor_cpu_power"] = "CPU Power W",
         ["monitor_battery_power"] = "Baterya W",
 
         // AURA MODES

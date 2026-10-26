@@ -688,6 +688,7 @@ public static class English
         ["monitor_power_load"] = "Power & Load",
         ["monitor_gpu_load"] = "GPU Load %",
         ["monitor_gpu_power"] = "GPU Power W",
+        ["monitor_cpu_power"] = "CPU Power W",
         ["monitor_battery_power"] = "Battery W",
 
         // AURA MODES

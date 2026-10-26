@@ -541,6 +541,7 @@ public static class Korean
         ["monitor_power_load"] = "전력 및 부하",
         ["monitor_gpu_load"] = "GPU 부하 %",
         ["monitor_gpu_power"] = "GPU 전력 W",
+        ["monitor_cpu_power"] = "CPU 전력 W",
         ["monitor_battery_power"] = "배터리 W",
 
         // AURA MODES

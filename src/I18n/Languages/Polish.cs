@@ -538,6 +538,7 @@ public static class Polish
         ["monitor_power_load"] = "Moc i obciążenie",
         ["monitor_gpu_load"] = "Obciążenie GPU %",
         ["monitor_gpu_power"] = "Moc GPU W",
+        ["monitor_cpu_power"] = "Moc CPU W",
         ["monitor_battery_power"] = "Bateria W",
 
         // AURA MODES

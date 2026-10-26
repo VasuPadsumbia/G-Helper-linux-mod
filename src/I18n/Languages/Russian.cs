@@ -538,6 +538,7 @@ public static class Russian
         ["monitor_power_load"] = "Мощность и нагрузка",
         ["monitor_gpu_load"] = "Нагрузка GPU %",
         ["monitor_gpu_power"] = "Мощность GPU Вт",
+        ["monitor_cpu_power"] = "Мощность CPU Вт",
         ["monitor_battery_power"] = "Батарея Вт",
 
         // AURA MODES

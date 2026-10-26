@@ -541,6 +541,7 @@ public static class Thai
         ["monitor_power_load"] = "พลังงานและโหลด",
         ["monitor_gpu_load"] = "โหลด GPU %",
         ["monitor_gpu_power"] = "พลังงาน GPU W",
+        ["monitor_cpu_power"] = "พลังงาน CPU W",
         ["monitor_battery_power"] = "แบตเตอรี่ W",
 
         // AURA MODES

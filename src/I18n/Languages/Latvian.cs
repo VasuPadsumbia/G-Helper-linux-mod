@@ -685,6 +685,7 @@ public static class Latvian
         ["monitor_power_load"] = "Jauda un slodze",
         ["monitor_gpu_load"] = "GPU slodze %",
         ["monitor_gpu_power"] = "GPU jauda W",
+        ["monitor_cpu_power"] = "CPU jauda W",
         ["monitor_battery_power"] = "Akumulators W",
 
         // AURA MODES

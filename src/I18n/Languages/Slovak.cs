@@ -685,6 +685,7 @@ public static class Slovak
         ["monitor_power_load"] = "Napájanie a záťaž",
         ["monitor_gpu_load"] = "Záťaž GPU %",
         ["monitor_gpu_power"] = "Napájanie GPU W",
+        ["monitor_cpu_power"] = "Napájanie CPU W",
         ["monitor_battery_power"] = "Batéria W",
 
         // AURA MODES

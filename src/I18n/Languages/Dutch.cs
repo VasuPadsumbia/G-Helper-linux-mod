@@ -538,6 +538,7 @@ public static class Dutch
         ["monitor_power_load"] = "Vermogen & belasting",
         ["monitor_gpu_load"] = "GPU-belasting %",
         ["monitor_gpu_power"] = "GPU-vermogen W",
+        ["monitor_cpu_power"] = "CPU-vermogen W",
         ["monitor_battery_power"] = "Accu W",
 
         // AURA MODES

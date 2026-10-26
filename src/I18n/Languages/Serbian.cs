@@ -541,6 +541,7 @@ public static class Serbian
         ["monitor_power_load"] = "Снага и оптерећење",
         ["monitor_gpu_load"] = "Оптерећење GPU %",
         ["monitor_gpu_power"] = "Снага GPU W",
+        ["monitor_cpu_power"] = "Снага CPU W",
         ["monitor_battery_power"] = "Батерија W",
 
         // AURA MODES

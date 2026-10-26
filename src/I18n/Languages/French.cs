@@ -538,6 +538,7 @@ public static class French
         ["monitor_power_load"] = "Puissance & charge",
         ["monitor_gpu_load"] = "Charge GPU %",
         ["monitor_gpu_power"] = "Puissance GPU W",
+        ["monitor_cpu_power"] = "Puissance CPU W",
         ["monitor_battery_power"] = "Batterie W",
 
         // AURA MODES

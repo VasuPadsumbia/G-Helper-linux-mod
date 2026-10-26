@@ -541,6 +541,7 @@ public static class Arabic
         ["monitor_power_load"] = "الطاقة والحمل",
         ["monitor_gpu_load"] = "حمل GPU %",
         ["monitor_gpu_power"] = "طاقة GPU W",
+        ["monitor_cpu_power"] = "طاقة CPU W",
         ["monitor_battery_power"] = "البطارية W",
 
         // AURA MODES

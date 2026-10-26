@@ -538,6 +538,7 @@ public static class Hungarian
         ["monitor_power_load"] = "Teljesítmény és terhelés",
         ["monitor_gpu_load"] = "GPU terhelés %",
         ["monitor_gpu_power"] = "GPU teljesítmény W",
+        ["monitor_cpu_power"] = "CPU teljesítmény W",
         ["monitor_battery_power"] = "Akkumulátor W",
 
         // AURA MODES

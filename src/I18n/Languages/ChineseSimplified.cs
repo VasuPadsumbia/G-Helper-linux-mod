@@ -541,6 +541,7 @@ public static class ChineseSimplified
         ["monitor_power_load"] = "功率与负载",
         ["monitor_gpu_load"] = "GPU 负载 %",
         ["monitor_gpu_power"] = "GPU 功率 W",
+        ["monitor_cpu_power"] = "CPU 功率 W",
         ["monitor_battery_power"] = "电池 W",
 
         // AURA MODES

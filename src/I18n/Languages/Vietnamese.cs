@@ -538,6 +538,7 @@ public static class Vietnamese
         ["monitor_power_load"] = "Công suất và tải",
         ["monitor_gpu_load"] = "Tải GPU %",
         ["monitor_gpu_power"] = "Công suất GPU W",
+        ["monitor_cpu_power"] = "Công suất CPU W",
         ["monitor_battery_power"] = "Pin W",
 
         // AURA MODES
