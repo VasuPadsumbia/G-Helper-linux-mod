@@ -1,3 +1,7 @@
+# Local AI assistant context (fork-only, kept out of the repo)
+CLAUDE.md
+.claude/
+
 # Build outputs
 src/bin/
 src/obj/

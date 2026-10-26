@@ -6,12 +6,12 @@
 
 <div align="center">
 
-[![GitHub Release](https://img.shields.io/github/v/release/utajum/g-helper-linux?style=for-the-badge&color=4a9eff)](https://github.com/utajum/g-helper-linux/releases/latest)
-[![Total Binary Downloads](https://img.shields.io/github/downloads/utajum/g-helper-linux/ghelper?style=for-the-badge&color=28c840&label=total%20binary%20downloads)](https://github.com/utajum/g-helper-linux/releases)
-[![Total AppImage Downloads](https://img.shields.io/github/downloads/utajum/g-helper-linux/GHelper-x86_64.AppImage?style=for-the-badge&color=28c840&label=total%20appimage%20downloads)](https://github.com/utajum/g-helper-linux/releases)
-[![License](https://img.shields.io/github/license/utajum/g-helper-linux?style=for-the-badge&color=a0c8ff)](https://github.com/utajum/g-helper-linux/blob/master/LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=4a9eff)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest)
+[![Total Binary Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/ghelper?style=for-the-badge&color=28c840&label=total%20binary%20downloads)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
+[![Total AppImage Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/GHelper-x86_64.AppImage?style=for-the-badge&color=28c840&label=total%20appimage%20downloads)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
+[![License](https://img.shields.io/github/license/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=a0c8ff)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/blob/master/LICENSE)
 [![Changelog](https://img.shields.io/badge/changelog-what's_new-ff8c42?style=for-the-badge)](CHANGELOG.md)
-[![Stars](https://img.shields.io/github/stars/utajum/g-helper-linux?style=for-the-badge&color=f0c040)](https://github.com/utajum/g-helper-linux/stargazers)
+[![Stars](https://img.shields.io/github/stars/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=f0c040)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/stargazers)
 
 </div>
 
@@ -62,6 +62,30 @@ Since `asusctl` doesn't really care about Ubuntu, I decided to port most functio
 The application is tested on KDE but other desktop environments should also work.
 
 Pull requests and feature requests are welcome!
+
+---
+
+## `░▒▓█ ╔══[ MOD EDITION ]══╗ █▓▒░`
+
+This repository is a fork of [utajum/g-helper-linux](https://github.com/utajum/g-helper-linux) that
+aims for **full feature parity with [G-Helper for Windows](https://github.com/seerge/g-helper)**,
+including its look. Everything below this section is upstream's documentation and still applies.
+
+```
+┌──[ PLANNED ON TOP OF UPSTREAM ]──────────────────────────────────┐
+│  Windows look              G-Helper flat dark UI + mode colors  │
+│  Hardware overlay          Light/Default/Full/Complete, FPS     │
+│  Richer tray               Temps, power, fan, load in tray      │
+│  Driver re-scan            GPU tuning re-detects after driver   │
+│                            install / update / mode change       │
+│  GPU tuning safety         30 s test, auto-revert, crash reset  │
+│  Advanced GPU power        Windows-range Dynamic Boost / TGP    │
+│                            (opt-in, at your own risk)           │
+│  XG Mobile panel           Dock status, eGPU switch             │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+Design documents: **[docs/mod/](docs/mod/)**.
 
 ---
 
@@ -234,7 +258,7 @@ lsmod | grep asus
 ### `╠══[ ONE-LINER INSTALL ]══╣`
 
 ```bash
-curl -sL https://raw.githubusercontent.com/utajum/g-helper-linux/master/install/install.sh | sudo bash
+curl -sL https://raw.githubusercontent.com/VasuPadsumbia/G-Helper-linux-mod/master/install/install.sh | sudo bash
 ```
 
 On NixOS the same command stages a module in `/etc/nixos` and runs `nixos-rebuild switch`.
@@ -244,7 +268,7 @@ The binary and the AppImage also check their system files on every start and off
 ### `╠══[ UNINSTALL ]══╣`
 
 ```bash
-curl -sL https://raw.githubusercontent.com/utajum/g-helper-linux/master/install/install.sh | sudo bash -s -- --uninstall
+curl -sL https://raw.githubusercontent.com/VasuPadsumbia/G-Helper-linux-mod/master/install/install.sh | sudo bash -s -- --uninstall
 ```
 
 Removes system files + udev rules + desktop entry. User config in `~/.config/ghelper` is preserved.
@@ -252,7 +276,7 @@ Removes system files + udev rules + desktop entry. User config in `~/.config/ghe
 ### `╠══[ MANUAL DOWNLOAD ]══╣`
 
 ```bash
-curl -sL https://github.com/utajum/g-helper-linux/releases/latest/download/ghelper -o ghelper
+curl -sL https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest/download/ghelper -o ghelper
 chmod +x ghelper
 ./ghelper
 ```
@@ -260,7 +284,7 @@ chmod +x ghelper
 ### `╠══[ APPIMAGE ]══╣`
 
 ```bash
-curl -sL https://github.com/utajum/g-helper-linux/releases/latest/download/GHelper-x86_64.AppImage -o GHelper-x86_64.AppImage
+curl -sL https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest/download/GHelper-x86_64.AppImage -o GHelper-x86_64.AppImage
 chmod +x GHelper-x86_64.AppImage
 ./GHelper-x86_64.AppImage
 ```

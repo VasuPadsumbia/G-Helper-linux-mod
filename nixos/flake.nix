@@ -5,7 +5,7 @@
 # Quick start:
 #   1. Test package:   nix build .#ghelper   (builds from source, no build.sh needed)
 #   2. In your flake:
-#        inputs.ghelper.url = "path:./nixos";  # or github:utajum/g-helper-linux?dir=nixos
+#        inputs.ghelper.url = "path:./nixos";  # or github:VasuPadsumbia/G-Helper-linux-mod?dir=nixos
 #        nixosConfigurations.myhost = nixpkgs.lib.nixosSystem {
 #          modules = [
 #            ghelper.nixosModules.default
