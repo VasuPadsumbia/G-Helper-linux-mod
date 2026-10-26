@@ -1,23 +1,19 @@
 <p align="center">
-  <a href="https://g-helper-linux.elevatech.xyz">
-    <img src="https://capsule-render.vercel.app/api?type=venom&height=200&text=G-HELPER%20LINUX&fontSize=60&color=0:0d1117,100:00ff41&stroke=00ff41&fontColor=00ff41&animation=twinkling&desc=%3E_%20KERNEL%3A%20LINUX%20%7C%20STATUS%3A%20ONLINE&descAlignY=75&descSize=16&fontFamily=monospace" />
+  <a href="https://github.com/VasuPadsumbia/G-Helper-linux-mod">
+    <img src="https://capsule-render.vercel.app/api?type=venom&height=200&text=G-HELPER%20LINUX%20MOD&fontSize=56&color=0:0d1117,100:00ff41&stroke=00ff41&fontColor=00ff41&animation=twinkling&desc=%3E_%20KERNEL%3A%20LINUX%20%7C%20STATUS%3A%20ONLINE&descAlignY=75&descSize=16&fontFamily=monospace" />
   </a>
 </p>
 
 <div align="center">
 
-[![GitHub Release](https://img.shields.io/github/v/release/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=4a9eff)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest)
-[![Total Binary Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/ghelper?style=for-the-badge&color=28c840&label=total%20binary%20downloads)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
-[![Total AppImage Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/GHelper-x86_64.AppImage?style=for-the-badge&color=28c840&label=total%20appimage%20downloads)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
-[![License](https://img.shields.io/github/license/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=a0c8ff)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/blob/master/LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=4a9eff&cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases/latest)
+[![Total Binary Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/ghelper?style=for-the-badge&color=28c840&cacheSeconds=3600&label=total%20binary%20downloads)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
+[![Total AppImage Downloads](https://img.shields.io/github/downloads/VasuPadsumbia/G-Helper-linux-mod/GHelper-x86_64.AppImage?style=for-the-badge&color=28c840&cacheSeconds=3600&label=total%20appimage%20downloads)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/releases)
+[![License](https://img.shields.io/github/license/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=a0c8ff&cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/blob/master/LICENSE)
 [![Changelog](https://img.shields.io/badge/changelog-what's_new-ff8c42?style=for-the-badge)](CHANGELOG.md)
-[![Stars](https://img.shields.io/github/stars/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=f0c040)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/stargazers)
+[![Stars](https://img.shields.io/github/stars/VasuPadsumbia/G-Helper-linux-mod?style=for-the-badge&color=f0c040&cacheSeconds=3600)](https://github.com/VasuPadsumbia/G-Helper-linux-mod/stargazers)
 
 </div>
-
-[![G-Helper for Linux](screenshot.png)](screenshot.png)
-
-*Click on the screenshot to view full size.*
 
 ```
  ██████╗       ██╗  ██╗███████╗██╗     ██████╗ ███████╗██████╗ 
@@ -42,18 +38,6 @@
             ╚══════════════════════════════════════╝
 ```
 
-<!-- star-history:start -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/star-history/star-history-dark.svg">
-  <img alt="Star history" src="assets/star-history/star-history-light.svg">
-</picture>
-<!-- star-history:end -->
-
-## `░▒▓█ ╔══[ WEBSITE ]══╗ █▓▒░`
-
-**[g-helper-linux.elevatech.xyz](https://g-helper-linux.elevatech.xyz)**
-
----
 
 ## `░▒▓█ ╔══[ MOTIVATION ]══╗ █▓▒░`
 
@@ -86,14 +70,6 @@ including its look. Everything below this section is upstream's documentation an
 ```
 
 Design documents: **[docs/mod/](docs/mod/)**.
-
----
-
-<div align="center">
-
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/utajum)
-
-</div>
 
 ---
 
@@ -581,6 +557,7 @@ g-helper-linux/
 
 ## `░▒▓█ ╔══[ CREDITS ]══╗ █▓▒░`
 
+- [g-helper-linux](https://github.com/utajum/g-helper-linux) by utajum, the project this fork is based on ([support the author](https://buymeacoffee.com/utajum))
 - [G-Helper](https://github.com/seerge/g-helper) by seerge
 - [Avalonia UI](https://avaloniaui.net/)
 - [asus-wmi kernel driver](https://github.com/torvalds/linux/tree/master/drivers/platform/x86)
@@ -598,8 +575,6 @@ Same license as the original G-Helper project.
 ---
 
 <div align="center">
-
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/utajum)
 
 ```
   ░▒▓█ END OF TRANSMISSION █▓▒░

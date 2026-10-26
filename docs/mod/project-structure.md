@@ -21,12 +21,15 @@ docs/mod/                          these design documents
 ## Changed upstream files (keep edits small)
 
 ```
-README.md                          MOD EDITION section, install URLs
+README.md                          MOD EDITION section, install URLs, our banner/badges;
+                                   upstream screenshot, star history, website and donation badges removed
+screenshot.png, assets/star-history/, .github/workflows/star-history.yml   removed (upstream's data)
+.github/workflows/release.yml      repo URLs; paths-ignore so docs/images/CI-only pushes don't release
 .gitignore                         CLAUDE.md, .claude/
 install/install.sh                 REPO=VasuPadsumbia/G-Helper-linux-mod
 install/ghelper.appdata.xml        bugtracker URL
 src/UI/Views/UpdatesWindow.axaml.cs, ChangelogWindow.axaml.cs   repo URLs
-.github/workflows/release.yml, .github/ISSUE_TEMPLATE/issue.md, nixos/flake.nix   repo URLs
+.github/ISSUE_TEMPLATE/issue.md, nixos/flake.nix   repo URLs
 src/UI/Styles/GHelperTheme.axaml   include WindowsLook (planned)
 src/UI/Views/MainWindow.axaml, FansWindow.axaml(.cs)   layout + GPU rows (planned)
 src/Helpers/TraySystemMonitor.cs   extra tray items (planned)
